@@ -827,38 +827,43 @@ color:#27ae60;
 
  /* PULSANTE DEI CONTATTI NELLE FAQ */
 
+/* NOTA: .faq-cta e derivate erano definite due volte nel foglio di stile (qui e
+   nella sezione "CTA FINALE (Contattaci)" più sotto). Unificate in un'unica
+   definizione che riproduce esattamente lo stile risultante dalla cascata CSS
+   attuale, così l'aspetto della pagina resta identico a prima della pulizia. */
 .faq-cta {
   text-align: center;          /* tutto centrato */
-  margin-top: 3.5rem;            /* respiro dalla sezione FAQ sopra */
+  margin-top: 40px;            /* spazio sopra */
   margin-bottom: 3rem;         /* respiro dal footer */
-  padding: 0.9rem 1.5rem;      /* ridotto a 0.9 rem: abbassa l'altezza del blocco. Aumenta per più respiro, diminuisce per più compattezza */
+  padding: 40px 20px;          /* spazio interno */
   border-top: 1px solid #d4a898; /* linea sottile che separa dalla FAQ */
+  background: #2c3e50;         /* sfondo scuro uguale all'header */
 }
 
 .faq-cta-testo {
   font-family: 'Inter', sans-serif;
-  font-size: 1.2rem;           /* leggermente più grande del testo normale */
+  font-size: 1.3em;            /* dimensione testo */
   font-weight: 600;            /* semibold — dà peso alla domanda */
-  color: #5a3e36;              /* tono caldo coerente con il sito */
-  margin-bottom: 1.2rem;       /* spazio tra la frase e il bottone */
+  color: white;                /* testo bianco su sfondo scuro */
+  margin-bottom: 16px;         /* spazio sotto prima del pulsante */
 }
 
 .faq-cta-button {
   display: inline-block;
-  background-color: #6aab7e;        /* verde chiaro */
-  color: #ffffff;
+  background: #f39c12;         /* colore arancione */
+  color: white;
   font-family: 'Inter', sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 1em;
+  font-weight: 700;            /* grassetto */
   text-decoration: none;
-  padding: 0.8rem 2.2rem;
-  border-radius: 6px;
-  transition: background-color 0.2s ease, color 0.2s ease; /* anima sia sfondo che testo */
+  padding: 12px 32px;          /* spazio interno pulsante */
+  border-radius: 8px;          /* angoli arrotondati */
+  transition: background 0.2s; /* animazione hover */
 }
 
 .faq-cta-button:hover {
-  background-color: #3a6147;        /* verde scuro all'hover */
-  color: #f4a261;                   /* testo arancione all'hover */
+  background: #d68910;         /* colore più scuro al passaggio del mouse */
+  color: #f4a261;              /* NOTA: colore ereditato dalla vecchia versione — vedi segnalazione */
 }
 
 
@@ -995,36 +1000,10 @@ color:#27ae60;
 
 /* ==============================
    CTA FINALE (Contattaci)
+   Le regole .faq-cta / .faq-cta-testo / .faq-cta-button che c'erano qui sono
+   state unificate con l'altra definizione più sopra (sezione "PULSANTE DEI
+   CONTATTI NELLE FAQ") per eliminare la duplicazione — vedi nota lì.
 ============================== */
-
-.faq-cta {
-    text-align: center;          /* centra tutto il contenuto */
-    background: #2c3e50;         /* sfondo scuro uguale all'header */
-    padding: 40px 20px;          /* spazio interno */
-    margin-top: 40px;            /* spazio sopra */
-}
-
-.faq-cta-testo {
-    color: white;                /* testo bianco su sfondo scuro */
-    font-size: 1.3em;            /* dimensione testo */
-    margin-bottom: 16px;         /* spazio sotto prima del pulsante */
-}
-
-.faq-cta-button {
-    display: inline-block;       /* si comporta come blocco ma inline */
-    background: #f39c12;         /* colore arancione */
-    color: white;
-    padding: 12px 32px;          /* spazio interno pulsante */
-    border-radius: 8px;          /* angoli arrotondati */
-    text-decoration: none;       /* rimuove sottolineatura */
-    font-weight: 700;            /* grassetto */
-    font-size: 1em;
-    transition: background 0.2s; /* animazione hover */
-}
-
-.faq-cta-button:hover {
-    background: #d68910;         /* colore più scuro al passaggio del mouse */
-}
 
 /* ==============================
    RESPONSIVE MOBILE (max 768px)
