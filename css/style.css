@@ -1599,13 +1599,6 @@ margin-top:20px;
     text-align: center;               /* centra il testo descrizione */
 }
 
-.corso-card {
-    text-decoration: none;
-    color: #2c3e50;
-    display: flex;                    /* lascia flex — non sovrascrivere con block */
-    flex-direction: column;
-}
-
 .corsi-toggle h2 {
     text-align: center;
     font-weight: 600;
