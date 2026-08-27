@@ -169,8 +169,11 @@ nav a:hover {
    HERO (box grande in cima alla home)
 =========================== */
 .hero {
-    background: linear-gradient(rgba(44,62,80,0.95), rgba(44,62,80,0.95)),
-                url('../images/hero.jpg') no-repeat center center/cover; /* immagine di sfondo con overlay scuro */
+    /* NOTA: qui c'era un riferimento a images/hero.jpg, file non presente nel repo (richiesta 404 innocua).
+       Rimosso in attesa di una vera immagine di sfondo — il gradiente sotto è già praticamente opaco quindi
+       l'aspetto visivo non cambia. Se in futuro aggiungi un'immagine hero, struttura consigliata:
+       background: linear-gradient(rgba(44,62,80,0.85), rgba(44,62,80,0.85)), url('../images/hero.jpg') no-repeat center center/cover; */
+    background: linear-gradient(rgba(44,62,80,0.95), rgba(44,62,80,0.95));
     color: white;
     text-align: center;
     padding: 40px 40px;                      /* spazio interno: riduci il primo numero per compattarlo */
