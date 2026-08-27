@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Workbook | Empower Lab</title>
+
+<!-- META SEO aggiunti da Claude (Fase 1, approvati da Angelo) - descrizione da rivedere, URL placeholder da aggiornare quando sarà scelto il dominio definitivo -->
+<meta name="description" content="I workbook di Empower Lab: guide pratiche digitali per lavorare in autonomia o come supporto a un percorso psicologico o formativo.">
+<meta name="keywords" content="workbook, guide pratiche, autostima, ansia, Empower Lab">
+<meta name="author" content="Angelo Caramia & Rosa Amodio">
+<meta name="robots" content="index, follow">
+
+<meta property="og:title" content="Workbook | Empower Lab">
+<meta property="og:description" content="I workbook di Empower Lab: guide pratiche digitali per lavorare in autonomia o come supporto a un percorso psicologico o formativo.">
+<meta property="og:image" content="https://tuosito.github.io/images/logo.png">
+<meta property="og:url" content="https://tuosito.github.io/workbook.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+
+<link rel="canonical" href="https://tuosito.github.io/workbook.html">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Raleway:ital,wght@1,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- HEADER caricato dal template condiviso -->
+<div id="header"></div>
+<script src="js/menu.js"></script>
+
+<div class="container">
+
+  <h1 class="servizio-titolo">Workbook</h1>
+
+  <div class="servizio-linea"></div>
+
+  <p class="servizio-sottotitolo">
+    Guide pratiche per lavorare in autonomia, o a fianco di un percorso psicologico
+  </p>
+
+  <h3 class="servizio-minititolo">Cos'è?</h3>
+  <p class="servizio-testo">
+    I workbook sono brevi guide operative pensate per accompagnare un percorso di crescita personale in modo autonomo, oppure per integrare un percorso psicologico o formativo già in corso. Ogni workbook propone un piccolo esperimento guidato su un meccanismo psicologico specifico, con spunti di riflessione e strumenti pratici da usare nella vita di tutti i giorni.
+  </p>
+
+  <h3 class="servizio-minititolo">Cosa non è?</h3>
+  <p class="servizio-testo">
+    Un workbook non sostituisce un percorso psicologico strutturato, soprattutto quando la difficoltà è significativa o duratura: è pensato come primo passo, come approfondimento autonomo, o come supporto complementare a un percorso già avviato.
+  </p>
+
+  <h3 class="servizio-minititolo">Come funziona</h3>
+  <p class="servizio-testo">
+    Qui trovi una breve presentazione dei workbook della collana Empower Lab. In futuro, da questa pagina sarà possibile acquistare e scaricare direttamente ogni singolo workbook.
+  </p>
+
+  <!-- GRIGLIA WORKBOOK — descrizioni generiche basate sui titoli/sottotitoli/argomenti forniti da Angelo,
+       da rifinire; quando saranno acquistabili, trasforma questi <div> in <a href="..."> come in corsi.html -->
+  <div class="corsi-grid">
+
+    <div class="corso-card">
+      <p style="text-transform:uppercase; font-size:0.72em; letter-spacing:1px; color:#f39c12; font-weight:700; margin-bottom:8px; text-align:center;">Autostima e Decisioni</p>
+      <h3>Quanto spazio occupa il giudizio degli altri nelle tue decisioni</h3>
+      <p>Un esperimento guidato per osservare un meccanismo psicologico quotidiano.</p>
+    </div>
+
+    <div class="corso-card">
+      <p style="text-transform:uppercase; font-size:0.72em; letter-spacing:1px; color:#f39c12; font-weight:700; margin-bottom:8px; text-align:center;">Autostima</p>
+      <h3>Quanto pesa il confronto tra chi sei e chi pensi di dover essere</h3>
+      <p>Un esperimento guidato per osservare come costruisci il tuo senso di valore giorno per giorno.</p>
+    </div>
+
+    <div class="corso-card">
+      <p style="text-transform:uppercase; font-size:0.72em; letter-spacing:1px; color:#f39c12; font-weight:700; margin-bottom:8px; text-align:center;">Ansia / Pensieri Ossessivi</p>
+      <h3>Quanto spazio occupano i pensieri intrusivi nella tua giornata</h3>
+      <p>Un esperimento guidato per osservare un meccanismo psicologico più comune di quanto pensi.</p>
+    </div>
+
+  </div>
+
+  <h2 class="feedback-sezione-titolo">Cosa dicono di noi</h2>
+  <div class="feedback-linea"></div>
+
+  <div class="feedback-card">
+    <p class="feedback-testo">
+      "Inserisci qui il testo del feedback del cliente o studente."
+    </p>
+    <p class="feedback-autore">
+      — Nome, ruolo o contesto
+    </p>
+  </div>
+
+  <div class="feedback-card">
+    <p class="feedback-testo">
+      "Inserisci qui il testo del feedback del cliente o studente."
+    </p>
+    <p class="feedback-autore">
+      — Nome, ruolo o contesto
+    </p>
+  </div>
+
+  <div class="feedback-card">
+    <p class="feedback-testo">
+      "Inserisci qui il testo del feedback del cliente o studente."
+    </p>
+    <p class="feedback-autore">
+      — Nome, ruolo o contesto
+    </p>
+  </div>
+
+</div>
+
+<!-- CALL TO ACTION FINALE -->
+<div class="faq-cta">
+  <p class="faq-cta-testo">Hai domande?</p>
+  <a href="contatti.html" class="faq-cta-button">Contattaci</a>
+</div>
+
+<!-- FOOTER caricato dal template condiviso -->
+<div id="footer"></div>
+<script>
+fetch("template/footer.html")
+.then(response => response.text())
+.then(data => {
+  document.getElementById("footer").innerHTML = data;
+});
+</script>
+
+<script>
+  var cards = document.querySelectorAll('.feedback-card');
+  var current = 0;
+  cards.forEach(function(card) {
+    card.style.display = 'none';
+    card.style.opacity = '0';
+    card.style.transition = 'opacity 0.5s ease';
+  });
+  function mostraCard(index) {
+    var card = cards[index];
+    card.style.display = 'block';
+    setTimeout(function() { card.style.opacity = '1'; }, 50);
+    setTimeout(function() {
+      card.style.opacity = '0';
+      setTimeout(function() {
+        card.style.display = 'none';
+        current = (current + 1) % cards.length;
+        mostraCard(current);
+      }, 500);
+    }, 3000);
+  }
+  mostraCard(0);
+</script>
+
+</body>
+</html>

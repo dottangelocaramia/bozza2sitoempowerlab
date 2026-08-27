@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Test psicologici | Empower Lab</title>
+
+<!-- META SEO aggiunti da Claude (Fase 1, approvati da Angelo) - descrizione da rivedere, URL placeholder da aggiornare quando sarà scelto il dominio definitivo -->
+<meta name="description" content="Test e questionari psicologici autosomministrabili di Empower Lab: uno strumento in più per iniziare, monitorare e valutare il tuo percorso.">
+<meta name="keywords" content="test psicologici, questionari, autovalutazione, Empower Lab">
+<meta name="author" content="Angelo Caramia & Rosa Amodio">
+<meta name="robots" content="index, follow">
+
+<meta property="og:title" content="Test psicologici | Empower Lab">
+<meta property="og:description" content="Test e questionari psicologici autosomministrabili di Empower Lab: uno strumento in più per iniziare, monitorare e valutare il tuo percorso.">
+<meta property="og:image" content="https://tuosito.github.io/images/logo.png">
+<meta property="og:url" content="https://tuosito.github.io/test.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+
+<link rel="canonical" href="https://tuosito.github.io/test.html">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Raleway:ital,wght@1,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- HEADER caricato dal template condiviso -->
+<div id="header"></div>
+<script src="js/menu.js"></script>
+
+<div class="container">
+
+  <h1 class="servizio-titolo">Test psicologici</h1>
+
+  <div class="servizio-linea"></div>
+
+  <p class="servizio-sottotitolo">
+    Uno strumento in più per iniziare, monitorare e valutare il tuo percorso
+  </p>
+
+  <h3 class="servizio-minititolo">Cos'è?</h3>
+  <p class="servizio-testo">
+    I test e i questionari psicologici sono strumenti standardizzati che aiutano a fotografare la situazione di partenza prima di iniziare un percorso, monitorare nel tempo eventuali cambiamenti e capire, insieme al professionista, se la strada intrapresa sta funzionando. Non sostituiscono un colloquio clinico, ma lo accompagnano con dati più oggettivi su cui confrontarsi.
+  </p>
+
+  <h3 class="servizio-minititolo">Cosa non è?</h3>
+  <p class="servizio-testo">
+    Un test psicologico non è una diagnosi definitiva né un giudizio sulla persona: è una fotografia di un momento specifico, da leggere e interpretare sempre insieme a chi lo somministra.
+  </p>
+
+  <h3 class="servizio-minititolo">Come funziona</h3>
+  <p class="servizio-testo">
+    Qui troverai via via i link ai singoli test autosomministrabili proposti da Empower Lab, ciascuno con una breve descrizione di cosa misura e a cosa serve. In futuro sarà possibile anche acquistare l'accesso e compilare il test tramite modulo Google dedicato.
+  </p>
+
+  <!-- GRIGLIA TEST — aggiungi qui una card per ogni test pubblicato, stesso schema di corsi.html -->
+  <div class="corsi-grid">
+
+    <a href="contatti.html" class="corso-card">
+      <h3>Nuovi test in arrivo</h3>
+      <p>
+        Stiamo preparando i primi test autosomministrabili. Torna presto a trovarci.
+      </p>
+    </a>
+
+  </div>
+
+  <h2 class="feedback-sezione-titolo">Cosa dicono di noi</h2>
+  <div class="feedback-linea"></div>
+
+  <div class="feedback-card">
+    <p class="feedback-testo">
+      "Inserisci qui il testo del feedback del cliente o studente."
+    </p>
+    <p class="feedback-autore">
+      — Nome, ruolo o contesto
+    </p>
+  </div>
+
+  <div class="feedback-card">
+    <p class="feedback-testo">
+      "Inserisci qui il testo del feedback del cliente o studente."
+    </p>
+    <p class="feedback-autore">
+      — Nome, ruolo o contesto
+    </p>
+  </div>
+
+  <div class="feedback-card">
+    <p class="feedback-testo">
+      "Inserisci qui il testo del feedback del cliente o studente."
+    </p>
+    <p class="feedback-autore">
+      — Nome, ruolo o contesto
+    </p>
+  </div>
+
+</div>
+
+<!-- CALL TO ACTION FINALE -->
+<div class="faq-cta">
+  <p class="faq-cta-testo">Hai domande?</p>
+  <a href="contatti.html" class="faq-cta-button">Contattaci</a>
+</div>
+
+<!-- FOOTER caricato dal template condiviso -->
+<div id="footer"></div>
+<script>
+fetch("template/footer.html")
+.then(response => response.text())
+.then(data => {
+  document.getElementById("footer").innerHTML = data;
+});
+</script>
+
+<script>
+  var cards = document.querySelectorAll('.feedback-card');
+  var current = 0;
+  cards.forEach(function(card) {
+    card.style.display = 'none';
+    card.style.opacity = '0';
+    card.style.transition = 'opacity 0.5s ease';
+  });
+  function mostraCard(index) {
+    var card = cards[index];
+    card.style.display = 'block';
+    setTimeout(function() { card.style.opacity = '1'; }, 50);
+    setTimeout(function() {
+      card.style.opacity = '0';
+      setTimeout(function() {
+        card.style.display = 'none';
+        current = (current + 1) % cards.length;
+        mostraCard(current);
+      }, 500);
+    }, 3000);
+  }
+  mostraCard(0);
+</script>
+
+</body>
+</html>
