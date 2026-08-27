@@ -2,7 +2,7 @@
 
 *Questo file vive dentro il repository e va aggiornato quando cambia qualcosa di rilevante. Serve per ritrovare velocemente il filo del progetto anche dopo giorni o settimane di pausa.*
 
-*Ultimo aggiornamento: 26 agosto 2026*
+*Ultimo aggiornamento: 27 agosto 2026*
 
 ## Dove siamo
 
@@ -42,6 +42,9 @@ La home (`index.html`) rimanda inoltre a: Supporto psicologico, Formazione, Perc
 3. **Correzioni tecniche rapide**: rimossa la pagina di prova `esempio-con-chat.html` (confermato non utilizzata); corretto il link rotto in home che puntava a `percorsi-studenti.html` invece di `percorsi.html`; aggiunto l'attributo `lang="it"` mancante su 4 pagine.
 4. **CSS ripulito**: eliminate due duplicazioni di regole nel foglio di stile (`.corso-card` e la famiglia `.faq-cta`), senza cambiare l'aspetto visivo del sito.
 5. **SEO on-page**: aggiunti meta description, keywords, robots, Open Graph e canonical a tutte le pagine principali, sul modello già presente nel template articolo.
+6. **SEO tecnica**: creati `sitemap.xml` e `robots.txt`; rimosso dal CSS il riferimento a un'immagine hero (`hero.jpg`) inesistente nel repository; ottimizzato `images/logo.png` (da 306 KB a 180 KB circa).
+7. **Dati strutturati (schema.org)**: aggiunti dati JSON-LD su `index.html` (ProfessionalService), `angelo-caramia.html` e `amodio.html` (Person), `faq.html` (FAQPage, generata dalle 17 domande/risposte reali già pubblicate), `autostima1.html` e `universita_ansia.html` (Article) — tutti basati solo su contenuti già presenti nel sito.
+8. **Correzioni di contenuto scoperte durante il punto 7**: il blocco meta SEO di `autostima1.html` era ancora il testo segnaposto del template (mai completato) — ora sostituito con contenuti reali; in `universita_ansia.html` l'`og:image` puntava a un file inesistente e il `canonical` aveva uno slug diverso dal nome file reale — entrambi corretti.
 
 Per il dettaglio esatto di ogni modifica, consulta la cronologia dei commit (`git log`) — ogni commit descrive cosa è cambiato e perché.
 
@@ -53,12 +56,10 @@ Per il dettaglio esatto di ogni modifica, consulta la cronologia dei commit (`gi
 
 ## Problemi noti / cose da tenere d'occhio
 
-- **Effetto collaterale scoperto durante la pulizia CSS**: il pulsante `.faq-cta-button`, al passaggio del mouse, cambia colore del testo in arancione (`#f4a261`) invece di restare bianco — è un comportamento preesistente (ereditato da una vecchia versione del componente), riprodotto fedelmente durante l'unificazione ma non ancora corretto nel merito. Da decidere se e come sistemarlo.
-- Immagine `hero.jpg` richiamata dal CSS (sfondo della sezione hero) ma assente dal repository.
-- Logo (`images/logo.png`) pesa 306 KB, non ottimizzato per il web.
+- Il pulsante `.faq-cta-button`, al passaggio del mouse, cambia colore del testo in arancione (`#f4a261`) — **confermato da Angelo: è voluto, non un bug.** Nessuna correzione necessaria.
 - Form contatti con iframe segnaposto (`INCOLLA_QUI_LINK_GOOGLE_FORM`) non ancora compilato.
 - Email nel footer e in `contatti.html` è provvisoria (`emailtemporanea@gmail.com`).
-- Mancano ancora: sitemap.xml, robots.txt, dati strutturati schema.org.
+- Nessun'immagine reale ancora disponibile per gli articoli (`autostima1.html`, `universita_ansia.html`): nei dati Open Graph/schema.org si usa temporaneamente il logo al posto di una foto specifica dell'articolo.
 
 ## Contenuti ancora da scrivere (lavoro di Angelo)
 
@@ -66,4 +67,4 @@ Bio completa in `chi-siamo.html`, `angelo-caramia.html`, `amodio.html`; presenta
 
 ## Prossimi passi possibili (roadmap, da approvare uno alla volta)
 
-Vedi il report di audit completo per l'elenco ordinato — in sintesi: creare sitemap.xml e robots.txt (non ancora fatto), aggiungere dati strutturati schema.org, ottimizzare le immagini, e solo più avanti l'eventuale valutazione di un sistema di build leggero (Jekyll) e la predisposizione per la futura area commerciale.
+Punti 1 (SEO tecnica) e 3 (dati strutturati) della roadmap del report di audit sono completati. Restano da valutare, in ordine: eventuali immagini reali per gli articoli; completamento dei contenuti ancora mancanti (vedi sopra); più avanti, l'eventuale valutazione di un sistema di build leggero (Jekyll) e la predisposizione per la futura area commerciale.
