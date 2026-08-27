@@ -44,159 +44,98 @@
 
 <div style="text-align: center;"><h1>Articoli</h1></div>
 <div class="linea-editoriale"></div>
-    
-<p>
-In questa sezione condividiamo riflessioni, strumenti pratici e approfondimenti su psicologia, studio universitario, crescita personale e relazioni.
-</p>
-
-
-
-<div class="articolo-preview">
-
-<h2>
-<a href="autostima1.html">
-Autostima - 
-Perché non riesci a valorizzarti: cause psicologiche dell’autosvalutazione e come cambiarla
-
-</a>
-</h2>
 
 <p>
-Il problema non è la mancanza di valore, ma un sistema che tende a non riconoscerlo.
+In questa sezione condividiamo riflessioni, strumenti pratici e approfondimenti su psicologia, studio universitario, crescita personale e relazioni. Gli articoli sono organizzati per argomento: clicca su una categoria per vedere gli articoli disponibili.
 </p>
+
+<!-- ARGOMENTI ARTICOLI — riorganizzati da Claude (2026-08-27) in una tendina colorata per argomento, su richiesta di Angelo.
+     Per aggiungere un nuovo articolo a un argomento esistente: duplica un blocco <a class="argomento-link">...</a> dentro il relativo .argomento-corpo.
+     Per aggiungere un nuovo argomento: duplica un intero blocco .argomento-blocco, cambia il colore in style="--argomento-colore:#........;", il titolo e la descrizione. -->
+<div class="argomenti-lista">
+
+  <div class="argomento-blocco" style="--argomento-colore:#f39c12;">
+    <button class="argomento-header">
+      <div class="argomento-header-testo">
+        <p class="argomento-titolo">Autostima</p>
+        <p class="argomento-descrizione">Testi dedicati a come si costruisce — e talvolta si perde — il senso del proprio valore, tra distorsioni di pensiero, dialogo interno e primi passi di cambiamento.</p>
+      </div>
+      <span class="argomento-toggle">▾</span>
+    </button>
+    <div class="argomento-corpo">
+
+      <a href="autostima1.html" class="argomento-link">
+        <span class="argomento-link-titolo">Perché non riesci a valorizzarti: cause psicologiche dell'autosvalutazione e come cambiarla</span>
+        <span class="argomento-link-desc">Il problema non è la mancanza di valore, ma un sistema che tende a non riconoscerlo.</span>
+      </a>
+
+    </div>
+  </div>
+
+  <div class="argomento-blocco" style="--argomento-colore:#2e6da4;">
+    <button class="argomento-header">
+      <div class="argomento-header-testo">
+        <p class="argomento-titolo">Ansia</p>
+        <p class="argomento-descrizione">Articoli su ansia, insicurezza e pressione da prestazione, in particolare nel contesto dello studio e della vita universitaria.</p>
+      </div>
+      <span class="argomento-toggle">▾</span>
+    </button>
+    <div class="argomento-corpo">
+
+      <a href="universita_ansia.html" class="argomento-link">
+        <span class="argomento-link-titolo">Ansia e insicurezza nello studio: il ruolo di aspettative, confronto e identità</span>
+        <span class="argomento-link-desc">Come aspettative, confronto e identità plasmano il percorso universitario.</span>
+      </a>
+
+    </div>
+  </div>
+
+  <div class="argomento-blocco" style="--argomento-colore:#16a085;">
+    <button class="argomento-header">
+      <div class="argomento-header-testo">
+        <p class="argomento-titolo">Articoli pubblicati su riviste</p>
+        <p class="argomento-descrizione">Articoli scritti da Angelo Caramia e Rosa Amodio per riviste di settore, ospitati su altri siti.</p>
+      </div>
+      <span class="argomento-toggle">▾</span>
+    </button>
+    <div class="argomento-corpo">
+
+      <a href="https://www.opibari.it/2025/08/05/filodiretto-num-5-6-7-8-2025/" class="argomento-link" target="_blank" rel="noopener">
+        <span class="argomento-link-titolo">Promozione Salute – L'attività fisica come cura integrata nel percorso oncologico</span>
+        <span class="argomento-link-desc">Da pagina 26 trovate l'articolo che abbiamo avuto il piacere di scrivere per la rivista FILO DIRETTO dell'ordine degli Infermieri.</span>
+        <span class="argomento-link-autore">— Angelo Caramia & Rosa Amodio</span>
+      </a>
+
+      <a href="https://www.opibari.it/2025/12/06/filodiretto-num-9-10-11-12-2025/" class="argomento-link" target="_blank" rel="noopener">
+        <span class="argomento-link-titolo">Promozione Salute – Il lavoro in Equipe come valore aggiunto al benessere del paziente</span>
+        <span class="argomento-link-desc">Da pagina 23 trovate l'articolo che ho avuto modo di scrivere per la rivista FILO DIRETTO dell'ordine degli Infermieri.</span>
+        <span class="argomento-link-autore">— Angelo Caramia</span>
+      </a>
+
+      <a href="https://www.opibari.it/2025/12/06/filodiretto-num-9-10-11-12-2025/" class="argomento-link" target="_blank" rel="noopener">
+        <span class="argomento-link-titolo">Promozione Salute – Riconoscersi di nuovo: l'immagine corporea come spazio di cura nel tumore al seno</span>
+        <span class="argomento-link-desc">Da pagina 21 trovate l'articolo che ho avuto modo di scrivere per la rivista FILO DIRETTO dell'ordine degli Infermieri.</span>
+        <span class="argomento-link-autore">— Rosa Amodio</span>
+      </a>
+
+    </div>
+  </div>
+
 </div>
 
-
-
-    
-<div class="articolo-preview">
-
-<h2>
-<a href="universita_ansia.html">
-Ansia e insicurezza nello studio: il ruolo di aspettative, confronto e identità
-</a>
-</h2>
-
-<p>
-Come aspettative, confronto e identità plasmano il percorso universitario
-</p>
+<script>
+document.querySelectorAll('.argomento-header').forEach(function(header) {
+  header.addEventListener('click', function() {
+    var blocco = header.parentElement;
+    var corpo = header.nextElementSibling;
+    var aperto = blocco.classList.toggle('aperto');
+    corpo.style.display = aperto ? 'block' : 'none';
+  });
+});
+</script>
 
 </div>
 
-
-
-
-    
-
-    
-<div class="articolo-preview">
-
-<h2>
-<a href="nome.html">
-TITOLO
-</a>
-</h2>
-
-<p>
-DESCRIZIONE
-</p>
-
-</div>
-
-</div>
-
-
-
-
-
-
-    
-<div class="container">
-<h2 class="page-section-title">Altri articoli pubblicati</h2>
-<br>
-<div class="articolo-preview">
-
-<h2>
-<a href="https://www.opibari.it/2025/08/05/filodiretto-num-5-6-7-8-2025/">
-Promozione Salute - 
-L'attività fisica come cura integrata nel percorso oncologico
-
-</a>
-</h2>
-
-<p>
-Da pagina 26 trovate l'articolo che abbiamo avuto il piacere di scrivere per la rivista FILO DIRETTO dell'ordine degli Infermieri.
-<br> 
- <span style="font-family: 'Raleway', sans-serif; font-size: 0.85em; font-style: italic; color: #888; letter-spacing: 0.08em;">
-    — Angelo Caramia & Rosa Amodio
-  </span>
-</p>
-</div>    
-
-
-
-
-
-
-
-
-<div class="articolo-preview">
-
-<h2>
-<a href="https://www.opibari.it/2025/12/06/filodiretto-num-9-10-11-12-2025/">
-Promozione Salute - 
-Il lavoro in Equipe come valore aggiunto al benessere del paziente
-
-</a>
-</h2>
-
-<p>
-Da pagina 23 trovate l'articolo che ho avuto modo di scrivere per la rivista FILO DIRETTO dell'ordine degli Infermieri.
-<br> 
-<span style="font-family: 'Raleway', sans-serif; font-size: 0.85em; font-style: italic; color: #888; letter-spacing: 0.08em;">
-    — Angelo Caramia 
-  </span>
-</p>
-</div>   
-
-
-
-
-
-
-<div class="articolo-preview">
-
-<h2>
-<a href="https://www.opibari.it/2025/12/06/filodiretto-num-9-10-11-12-2025/">
-Promozione Salute - 
-Riconoscersi di nuovo: l'immagine corporea come spazio di cura nel tumore al seno
-
-</a>
-</h2>
-
-<p>
-Da pagina 21 trovate l'articolo che ho avuto modo di scrivere per la rivista FILO DIRETTO dell'ordine degli Infermieri.
-<br> 
-<span style="font-family: 'Raleway', sans-serif; font-size: 0.85em; font-style: italic; color: #888; letter-spacing: 0.08em;">
-    — Rosa Amodio
-  </span>
-</p>
-</div>    
-
-
-
-    
-</div>
-
-
-
-
-
-
-
-
-    
-    
 
 
 <div id="footer"></div>

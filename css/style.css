@@ -1864,3 +1864,143 @@ footer a:hover {
         height: 140px;
     }
 }
+
+
+/* ===========================
+   LINK TRA ARTICOLI (ipertesto interno)
+   aggiunto da Claude (2026-08-27)
+=========================== */
+.link-articolo {
+    color: #f39c12;
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-color: rgba(243, 156, 18, 0.4);
+    text-underline-offset: 3px;
+}
+
+.link-articolo:hover {
+    color: #d68910;
+    text-decoration-color: #d68910;
+}
+
+/* ===========================
+   ARGOMENTI ARTICOLI — tendina colorata per categoria
+   aggiunto da Claude (2026-08-27) per articoli.html
+=========================== */
+.argomenti-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin: 30px 0;
+}
+
+.argomento-blocco {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    border-left: 6px solid var(--argomento-colore, #f39c12);
+    background: #fff;
+}
+
+.argomento-header {
+    width: 100%;
+    text-align: left;
+    background: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    transition: background 0.2s;
+    font-family: inherit;
+}
+
+.argomento-header:hover {
+    background: #faf7f2;
+}
+
+.argomento-header-testo {
+    flex: 1;
+}
+
+.argomento-titolo {
+    margin: 0 0 4px 0;
+    font-size: 1.25em;
+    color: var(--argomento-colore, #f39c12);
+    font-weight: 700;
+}
+
+.argomento-descrizione {
+    margin: 0;
+    color: #555;
+    font-size: 0.95em;
+}
+
+.argomento-toggle {
+    font-size: 1.4em;
+    color: var(--argomento-colore, #f39c12);
+    transition: transform 0.25s;
+    flex-shrink: 0;
+}
+
+.argomento-blocco.aperto .argomento-toggle {
+    transform: rotate(180deg);
+}
+
+.argomento-corpo {
+    display: none;
+    padding: 4px 24px 20px 24px;
+    background: #fffdf9;
+    border-top: 1px solid #f0e9dd;
+}
+
+.argomento-link {
+    display: block;
+    padding: 14px 16px;
+    margin-top: 12px;
+    border-radius: 8px;
+    background: white;
+    border: 1px solid #eee;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.argomento-link:hover {
+    transform: translateX(4px);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.argomento-link-titolo {
+    display: block;
+    color: #2c3e50;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.argomento-link-desc {
+    display: block;
+    color: #666;
+    font-size: 0.9em;
+}
+
+.argomento-link-autore {
+    display: block;
+    color: #999;
+    font-size: 0.82em;
+    font-style: italic;
+    margin-top: 6px;
+}
+
+@media (max-width: 768px) {
+    .argomento-header {
+        padding: 14px 16px;
+    }
+    .argomento-titolo {
+        font-size: 1.1em;
+    }
+    .argomento-corpo {
+        padding: 4px 16px 16px 16px;
+    }
+}
