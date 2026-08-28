@@ -1844,24 +1844,31 @@ footer a:hover {
   opacity: 0.80;               /* si scurisce leggermente all'hover: abbassa per effetto più marcato */
 }
 
+/* icona (solo simbolo) dentro i bottoni Instagram: ingrandita del 50%
+   su richiesta di Angelo (28/08/2026), senza ingrandire il testo del bottone */
+.instagram-button-md i,
+.instagram-button-lg i {
+  font-size: 1.5em;
+}
+
 
 .instagram-icon-piccola {
   color: #bc1888;              /* colore icona: viola Instagram #bc1888; , cambia a #ffffff se su sfondo scuro - #c9469f simile ma più chiaro */
-  font-size: 1.4rem;           /* dimensione icona: aumenta per più grande, diminuisce per più piccola */
+  font-size: 2.1rem;           /* dimensione icona: aumentata del 50% su richiesta di Angelo (28/08/2026), era 1.4rem */
   transition: opacity 0.2s ease; /* animazione hover */
   text-decoration: none;       /* rimuove sottolineatura */
 }
 
 .instagram-icon-media {
   color: #bc1888;              /* colore icona: viola Instagram #bc1888; , cambia a #ffffff se su sfondo scuro */
-  font-size: 1.7rem;           /* dimensione icona: aumenta per più grande, diminuisce per più piccola */
+  font-size: 2.55rem;          /* dimensione icona: aumentata del 50% su richiesta di Angelo (28/08/2026), era 1.7rem */
   transition: opacity 0.2s ease; /* animazione hover */
   text-decoration: none;       /* rimuove sottolineatura */
 }
 
 .instagram-icon-grande {
   color: #bc1888;              /* colore icona: viola Instagram #bc1888; , cambia a #ffffff se su sfondo scuro */
-  font-size: 2.3rem;           /* dimensione icona: aumenta per più grande, diminuisce per più piccola */
+  font-size: 3.45rem;          /* dimensione icona: aumentata del 50% su richiesta di Angelo (28/08/2026), era 2.3rem */
   transition: opacity 0.2s ease; /* animazione hover */
   text-decoration: none;       /* rimuove sottolineatura */
 }
