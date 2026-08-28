@@ -2,7 +2,7 @@
 
 *Questo file vive dentro il repository e va aggiornato quando cambia qualcosa di rilevante. Serve per ritrovare velocemente il filo del progetto anche dopo giorni o settimane di pausa.*
 
-*Ultimo aggiornamento: 28 agosto 2026 (SEO site-wide)*
+*Ultimo aggiornamento: 28 agosto 2026 (empowerlab.html + rebranding Empower Lab Psy)*
 
 ## Dove siamo
 
@@ -10,7 +10,7 @@ Questo repository (**Bozza2 Sito Empower Lab**) è l'ambiente di lavoro del sito
 
 **Roadmap commerciale concordata (28/08/2026)**: fase iniziale = sito statico, ogni servizio richiede un contatto diretto prima dell'acquisto (fase attuale); fase intermedia = integrazione di un sistema di pagamento (probabilmente Stripe) sul sito esistente; fase finale = login utenti, area riservata, acquisto diretto senza intervento di Angelo. Si lavora ora solo sulla fase iniziale.
 
-Stato: Fase 1 e roadmap tecnica concluse. Email uniformata ovunque, form contatti collegato al Google Form reale di Angelo, nuova pagina privacy.html, `universita_ansia.html` rinominata in `ansia-universita.html`, `autostima2.html` completato da Angelo con il contenuto reale (autostima da prestazione), create le pagine di dettaglio per i 3 test e i 3 workbook (con invito a contattarci e bottone "Acquista" per ora disattivato). Effettuata un'ottimizzazione SEO estesa a tutto il sito (titoli, meta description, keywords, Open Graph, dati strutturati schema.org — BreadcrumbList e Service — e link interni), con priorità sulle pagine servizi, articoli e profilo, in base ai soli contenuti reali già presenti. Nessuna migrazione, dominio o pubblicazione definitiva è stata fatta o richiesta.
+Stato: Fase 1 e roadmap tecnica concluse. Email uniformata ovunque, form contatti collegato al Google Form reale di Angelo, nuova pagina privacy.html, `universita_ansia.html` rinominata in `ansia-universita.html`, `autostima2.html` completato da Angelo con il contenuto reale (autostima da prestazione), create le pagine di dettaglio per i 3 test e i 3 workbook (con invito a contattarci e bottone "Acquista" per ora disattivato). Effettuata un'ottimizzazione SEO estesa a tutto il sito (titoli, meta description, keywords, Open Graph, dati strutturati schema.org — BreadcrumbList e Service — e link interni), con priorità sulle pagine servizi, articoli e profilo, in base ai soli contenuti reali già presenti. `empowerlab.html` completato con il testo reale di Angelo, impaginato in paragrafi con CTA "Contattaci". Rebranding completo del sito da "Empower Lab" a "Empower Lab Psy" (title, meta, Open Graph, schema.org e testo su tutte le pagine, incluso il template header/footer), per uniformità con Instagram ed email; icone Instagram cliccabili ingrandite del 50%. Nessuna migrazione, dominio o pubblicazione definitiva è stata fatta o richiesta.
 
 ## Come è fatto il sito (architettura)
 
@@ -58,8 +58,9 @@ Il menu principale (in `template/header.html`) collega: Home, Chi siamo, Empower
 10. **`universita_ansia.html` rinominata in `ansia-universita.html`**, tutti i link aggiornati.
 11. **`autostima2.html` completato**: Angelo ha scritto il contenuto reale (tema: autostima legata alla performance/perfezionismo); Claude ha allineato titolo, meta description, keywords, Open Graph e schema.org al testo reale, e aggiunto link ipertestuali reciproci con autostima1.html.
 12. **Pagine di dettaglio test** (`test1/2/3.html`) e **workbook** (`workbook1/2/3.html`): ciascuna con CTA "Contattaci" attiva e bottone "Acquista" disattivato, in attesa della fase intermedia con i pagamenti.
-13. **Backup completo esterno a GitHub** (file + storico Git), salvato sul Mac di Angelo.
+13. **Backup completo esterno a GitHub** (file + storico Git), salvato sul Mac di Angelo. Da rigenerare dopo le modifiche dei punti 14-15.
 14. **Ottimizzazione SEO estesa a tutto il sito (28/08/2026)**: su richiesta esplicita di Angelo, titoli, meta description, keywords e Open Graph rivisti su tutte le pagine servizi (servizi.html e le 5 sottopagine, più corsi.html) e profilo (chi-siamo.html, empowerlab.html, angelo-caramia.html, amodio.html); corretto un titolo duplicato in empowerlab.html e rimossi commenti-placeholder obsoleti in 4 pagine servizi; aggiunti dati strutturati BreadcrumbList su tutte le pagine servizi/articoli/profilo (prima assenti) e schema.org Service sulle 5 pagine servizio principali; allineate le immagini reali (al posto del logo generico) in og:image e schema.org di autostima1.html, autostima2.html e ansia-universita.html e nelle pagine di Angelo e Rosa; aggiunto un link ipertestuale reciproco tra autostima1.html e autostima2.html.
+15. **`empowerlab.html` completato e rebranding "Empower Lab Psy" (28/08/2026)**: Angelo ha scritto il testo reale della pagina EmpowerLab (missione, chi siamo, cosa facciamo); Claude lo ha impaginato in paragrafi distinti con due titoli di sezione, aggiunto un bottone "Contattaci" finale e riposizionato il link al profilo Instagram già presente in pagina. Su richiesta esplicita di Angelo, il brand "Empower Lab"/"EmpowerLab" è stato rinominato in "Empower Lab Psy" ovunque nel sito (title, meta description, keywords, Open Graph, schema.org e testo), incluso il template header/footer (che si propaga a tutte le pagine) e il testo dei bottoni Instagram ("Empower_Lab" → "Empower_Lab_Psy"), per uniformità con il profilo Instagram e l'email (@empower_lab_psy). Le icone Instagram cliccabili (piccola/media/grande, più quella nei bottoni) sono state ingrandite del 50%. Non toccati i file nella cartella "Backup e prova" (bozze/backup interni di Angelo, non pagine live del sito).
 
 Per il dettaglio esatto di ogni modifica, consulta la cronologia dei commit (`git log`).
 
