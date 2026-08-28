@@ -375,6 +375,46 @@ h2 {
 }
 
 /* ===========================
+   AZIONI PAGINE DETTAGLIO TEST/WORKBOOK
+   Aggiunto da Claude (2026-08-28)
+=========================== */
+.dettaglio-azioni {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.acquista-button-disabled {
+    display: inline-block;
+    background: #d9d9d9;
+    color: #777;
+    font-family: 'Inter', sans-serif;
+    font-size: 1em;
+    font-weight: 700;
+    padding: 12px 32px;
+    border: none;
+    border-radius: 8px;
+    cursor: not-allowed;
+}
+
+.dettaglio-acquista-nota {
+    width: 100%;
+    text-align: center;
+    font-size: 0.85em;
+    color: #888;
+    margin-top: 8px;
+}
+
+.dettaglio-torna-indietro {
+    display: block;
+    text-align: center;
+    margin-top: 25px;
+    font-size: 0.9em;
+}
+
+/* ===========================
    CTA FORM CONTATTI (Google Form)
    Aggiunto da Claude (2026-08-27)
 =========================== */
