@@ -2507,3 +2507,106 @@ a.servizio-card {
     background: #1ebc59;
     color: white;
 }
+
+/* ===========================
+   FOUNDERS A COLONNA (chi-siamo.html) — aggiunto da Claude (29/08/2026) su richiesta di Angelo:
+   le due descrizioni dei founder affiancate su desktop (Angelo a sinistra, Rosa a destra),
+   con una piccola foto accanto al nome di ciascuno. Impilate una sopra l'altra su mobile.
+=========================== */
+.founders-columns {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.founder-card {
+    flex: 1 1 320px;
+    min-width: 0;
+}
+
+.founder-card-intestazione {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 10px;
+}
+
+.founder-card-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex: 0 0 auto;
+    border: 2px solid #f39c12;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+.founder-card-intestazione h3 {
+    margin-bottom: 4px;
+}
+
+.founder-card-ruolo {
+    font-family: 'Raleway', sans-serif;
+    font-style: italic;
+    font-size: 0.95em;
+    color: #888;
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+@media (max-width: 700px) {
+    .founders-columns {
+        flex-direction: column;
+    }
+}
+
+/* ===========================================================================
+   CARD SERVIZI GRANDI (servizi.html) — aggiunto da Claude (29/08/2026) su richiesta di Angelo
+   Riusa .servizio-card (gia' usata cliccabile in index.html) aggiungendo icona e colore
+   per servizio, con gli stessi colori gia' usati nella pagina articoli.html.
+=========================================================================== */
+.servizi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 26px;
+    margin-top: 40px;
+}
+
+.servizio-card-grande {
+    border: 2px solid #eee;
+    border-top: 5px solid var(--servizio-colore, #f39c12);
+    text-align: center;
+    padding: 34px 24px;
+    width: auto;
+}
+
+.servizio-card-grande:hover {
+    border-color: var(--servizio-colore, #f39c12);
+}
+
+.servizio-card-grande .servizio-card-icona {
+    font-size: 2.3rem;
+    color: var(--servizio-colore, #f39c12);
+    margin-bottom: 14px;
+}
+
+.servizio-card-grande h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.25rem;
+    color: #2c3e50;
+}
+
+.servizio-card-grande p {
+    color: #555555;
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
+.servizio-card-grande .servizio-card-cta {
+    display: inline-block;
+    margin-top: 16px;
+    font-weight: 600;
+    color: var(--servizio-colore, #f39c12);
+}
