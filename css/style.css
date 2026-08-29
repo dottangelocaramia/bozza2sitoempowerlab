@@ -2208,3 +2208,129 @@ footer a:hover {
         padding: 4px 16px 16px 16px;
     }
 }
+
+
+/* ===========================================================================
+   ANIMAZIONI SCROLL-REVEAL (generiche, riutilizzabili)
+   aggiunte da Claude (29/08/2026) su richiesta di Angelo — vedi js/scroll-reveal.js
+=========================================================================== */
+.reveal-up {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal-up.reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* piccolo effetto "a cascata" quando piu' elementi reveal-up sono affiancati */
+.reveal-up:nth-child(2) { transition-delay: 0.08s; }
+.reveal-up:nth-child(3) { transition-delay: 0.16s; }
+.reveal-up:nth-child(4) { transition-delay: 0.24s; }
+.reveal-up:nth-child(5) { transition-delay: 0.32s; }
+.reveal-up:nth-child(6) { transition-delay: 0.4s; }
+
+/* ===========================================================================
+   FOTO PROFILO — comparsa da destra (solo dove si aggiunge questa classe)
+   aggiunto da Claude (29/08/2026) su richiesta di Angelo per angelo-caramia.html
+=========================================================================== */
+.foto-profilo-animata {
+    opacity: 0;
+    transform: translateX(80px);
+}
+
+/* ===========================================================================
+   BOX "IN BREVE" — sezione riassuntiva evidenziata (angelo-caramia.html)
+   aggiunto da Claude (29/08/2026) su richiesta di Angelo
+=========================================================================== */
+.in-breve-box {
+    background: #fdf3e7;
+    border-left: 4px solid #f39c12;
+    border-radius: 0 12px 12px 0;
+    padding: 26px 30px;
+    margin: 28px 0;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+}
+.in-breve-box h3 {
+    margin-top: 0;
+    margin-bottom: 14px;
+    color: #f39c12;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 0.95em;
+    font-family: 'Raleway', sans-serif;
+}
+.in-breve-box p {
+    margin: 0;
+    color: #2c3e50;
+}
+
+/* ===========================================================================
+   AMBITI DI LAVORO — griglia di card (angelo-caramia.html)
+   aggiunto da Claude (29/08/2026) su richiesta di Angelo
+=========================================================================== */
+.ambiti-lavoro-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 18px;
+    margin-top: 18px;
+}
+.ambito-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+    background: #ffffff;
+    border: 1.5px solid #e2e2e2;
+    border-radius: 12px;
+    padding: 26px 18px;
+    text-decoration: none;
+    color: #333333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.ambito-card i {
+    font-size: 1.9rem;
+    color: #4f46e5;
+}
+.ambito-card span {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #2c3e50;
+}
+.ambito-card:hover {
+    transform: scale(1.06) translateY(-4px);
+    box-shadow: 0 10px 24px rgba(79, 70, 229, 0.2);
+    border-color: #4f46e5;
+}
+
+/* ===========================================================================
+   CARD SERVIZI HOME — ora l'intera card e' cliccabile (index.html)
+   aggiunto/modificato da Claude (29/08/2026) su richiesta di Angelo
+=========================================================================== */
+a.servizio-card {
+    text-decoration: none;
+    color: #333333;
+    cursor: pointer;
+}
+
+/* ===========================================================================
+   CITAZIONE IN EVIDENZA HOME (.box-invisibile-citazioni)
+   resa piu' prominente da Claude (29/08/2026) su richiesta di Angelo
+=========================================================================== */
+.box-invisibile-citazioni {
+    border-left: 4px solid #f39c12;
+    background: #fdf3e7;
+    border-radius: 0 12px 12px 0;
+    padding-top: 1.4rem;
+    padding-bottom: 1.4rem;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+}
+.box-invisibile-citazioni p {
+    font-family: 'Raleway', sans-serif;
+    font-style: italic;
+    font-size: 1.25rem;
+    color: #2c3e50;
+    margin: 0;
+}
