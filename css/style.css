@@ -880,6 +880,10 @@ color:#27ae60;
 .servizio-card-home {
     text-align: center;
     border-top: 5px solid #2596be;
+    width: auto;           /* la base .servizio-card ha width:280px fisso: qui serve
+                              auto, altrimenti la card puo' straboccare dalla sua
+                              cella di grid e ricreare l'effetto di sovrapposizione */
+    padding: 34px 24px;
 }
 
 .servizio-card-home:hover {
