@@ -2196,46 +2196,58 @@ footer a:hover {
    aggiunto da Claude (2026-08-27) per articoli.html
 =========================== */
 .argomenti-lista {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 26px;
+    align-items: start;
     margin: 30px 0;
 }
 
+/* Restyle da Claude (29/08/2026) su richiesta di Angelo: da blocchi impilati a card,
+   stesso linguaggio visivo di servizi.html (icona, bordo superiore colorato, hover),
+   mantenendo colori e testo gia' presenti e lo stesso comportamento a tendina. */
 .argomento-blocco {
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-    border-left: 6px solid var(--argomento-colore, #f39c12);
+    border: 2px solid #eee;
+    border-top: 5px solid var(--argomento-colore, #f39c12);
     background: #fff;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.argomento-blocco:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    border-color: var(--argomento-colore, #f39c12);
 }
 
 .argomento-header {
     width: 100%;
-    text-align: left;
-    background: #fff;
+    text-align: center;
+    background: transparent;
     border: none;
     cursor: pointer;
-    padding: 18px 24px;
+    padding: 32px 24px 26px 24px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-    transition: background 0.2s;
     font-family: inherit;
 }
 
-.argomento-header:hover {
-    background: #faf7f2;
+.argomento-icona {
+    font-size: 2.1rem;
+    color: var(--argomento-colore, #f39c12);
+    margin-bottom: 14px;
 }
 
 .argomento-header-testo {
-    flex: 1;
+    width: 100%;
 }
 
 .argomento-titolo {
-    margin: 0 0 4px 0;
-    font-size: 1.25em;
+    margin: 0 0 8px 0;
+    font-size: 1.2em;
     color: var(--argomento-colore, #f39c12);
     font-weight: 700;
 }
@@ -2243,25 +2255,33 @@ footer a:hover {
 .argomento-descrizione {
     margin: 0;
     color: #555;
-    font-size: 1.05em;
+    font-size: 0.95em;
+    line-height: 1.5;
 }
 
 .argomento-toggle {
-    font-size: 1.4em;
+    display: inline-block;
+    margin-top: 18px;
+    font-size: 0.95em;
+    font-weight: 600;
     color: var(--argomento-colore, #f39c12);
-    transition: transform 0.25s;
-    flex-shrink: 0;
 }
 
-.argomento-blocco.aperto .argomento-toggle {
+.argomento-toggle i {
+    margin-left: 4px;
+    transition: transform 0.25s;
+}
+
+.argomento-blocco.aperto .argomento-toggle i {
     transform: rotate(180deg);
 }
 
 .argomento-corpo {
     display: none;
-    padding: 4px 24px 20px 24px;
+    padding: 4px 24px 24px 24px;
     background: #fffdf9;
     border-top: 1px solid #f0e9dd;
+    text-align: left;
 }
 
 .argomento-link {

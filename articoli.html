@@ -66,13 +66,14 @@ In questa sezione condividiamo riflessioni, strumenti pratici e approfondimenti 
      Per aggiungere un nuovo argomento: duplica un intero blocco .argomento-blocco, cambia il colore in style="--argomento-colore:#........;", il titolo e la descrizione. -->
 <div class="argomenti-lista">
 
-  <div class="argomento-blocco" style="--argomento-colore:#f39c12;">
+  <div class="argomento-blocco reveal-up" style="--argomento-colore:#f39c12;">
     <button class="argomento-header">
+      <div class="argomento-icona"><i class="fa-solid fa-heart"></i></div>
       <div class="argomento-header-testo">
         <p class="argomento-titolo">Autostima</p>
         <p class="argomento-descrizione">Testi dedicati a come si costruisce — e talvolta si perde — il senso del proprio valore, tra distorsioni di pensiero, dialogo interno e primi passi di cambiamento.</p>
       </div>
-      <span class="argomento-toggle">▾</span>
+      <span class="argomento-toggle">Vedi gli articoli <i class="fa-solid fa-chevron-down"></i></span>
     </button>
     <div class="argomento-corpo">
 
@@ -96,13 +97,14 @@ In questa sezione condividiamo riflessioni, strumenti pratici e approfondimenti 
     </div>
   </div>
 
-  <div class="argomento-blocco" style="--argomento-colore:#2e6da4;">
+  <div class="argomento-blocco reveal-up" style="--argomento-colore:#2e6da4;">
     <button class="argomento-header">
+      <div class="argomento-icona"><i class="fa-solid fa-cloud-bolt"></i></div>
       <div class="argomento-header-testo">
         <p class="argomento-titolo">Ansia</p>
         <p class="argomento-descrizione">Articoli su ansia, insicurezza e pressione da prestazione, in particolare nel contesto dello studio e della vita universitaria.</p>
       </div>
-      <span class="argomento-toggle">▾</span>
+      <span class="argomento-toggle">Vedi gli articoli <i class="fa-solid fa-chevron-down"></i></span>
     </button>
     <div class="argomento-corpo">
 
@@ -127,13 +129,14 @@ In questa sezione condividiamo riflessioni, strumenti pratici e approfondimenti 
   </div>
 
   <!-- NUOVO GRUPPO "Formazione" aggiunto da Claude (28/08/2026) su richiesta di Angelo -->
-  <div class="argomento-blocco" style="--argomento-colore:#9575cd;">
+  <div class="argomento-blocco reveal-up" style="--argomento-colore:#9575cd;">
     <button class="argomento-header">
+      <div class="argomento-icona"><i class="fa-solid fa-graduation-cap"></i></div>
       <div class="argomento-header-testo">
         <p class="argomento-titolo">Formazione</p>
         <p class="argomento-descrizione">Articoli su come studiare e formarsi con criterio, tra motivazione, metodo e gestione del sovraccarico di informazioni.</p>
       </div>
-      <span class="argomento-toggle">▾</span>
+      <span class="argomento-toggle">Vedi gli articoli <i class="fa-solid fa-chevron-down"></i></span>
     </button>
     <div class="argomento-corpo">
 
@@ -153,13 +156,14 @@ In questa sezione condividiamo riflessioni, strumenti pratici e approfondimenti 
   </div>
 
   <!-- NUOVO GRUPPO "Lutto e Death Education" aggiunto da Claude (29/08/2026) su richiesta di Angelo -->
-  <div class="argomento-blocco" style="--argomento-colore:#6d4c41;">
+  <div class="argomento-blocco reveal-up" style="--argomento-colore:#6d4c41;">
     <button class="argomento-header">
+      <div class="argomento-icona"><i class="fa-solid fa-dove"></i></div>
       <div class="argomento-header-testo">
         <p class="argomento-titolo">Lutto e Death Education</p>
         <p class="argomento-descrizione">Articoli sull'elaborazione del lutto e delle esperienze di perdita, e su come parlare di morte con bambini e ragazzi.</p>
       </div>
-      <span class="argomento-toggle">▾</span>
+      <span class="argomento-toggle">Vedi gli articoli <i class="fa-solid fa-chevron-down"></i></span>
     </button>
     <div class="argomento-corpo">
 
@@ -171,13 +175,14 @@ In questa sezione condividiamo riflessioni, strumenti pratici e approfondimenti 
     </div>
   </div>
 
-  <div class="argomento-blocco" style="--argomento-colore:#16a085;">
+  <div class="argomento-blocco reveal-up" style="--argomento-colore:#16a085;">
     <button class="argomento-header">
+      <div class="argomento-icona"><i class="fa-solid fa-newspaper"></i></div>
       <div class="argomento-header-testo">
         <p class="argomento-titolo">Articoli pubblicati su riviste</p>
         <p class="argomento-descrizione">Articoli scritti da Angelo Caramia e Rosa Amodio per riviste di settore, ospitati su altri siti.</p>
       </div>
-      <span class="argomento-toggle">▾</span>
+      <span class="argomento-toggle">Vedi gli articoli <i class="fa-solid fa-chevron-down"></i></span>
     </button>
     <div class="argomento-corpo">
 
@@ -230,6 +235,10 @@ document.getElementById("footer").innerHTML = data;
 });
 
 </script>
+
+<!-- Script aggiunto da Claude (29/08/2026): necessario per l'animazione di comparsa
+     dal basso (classe reveal-up) applicata alle nuove card degli argomenti. -->
+<script src="js/scroll-reveal.js"></script>
 
     
 </body>
