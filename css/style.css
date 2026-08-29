@@ -1386,6 +1386,70 @@ color:#27ae60;
     letter-spacing: 0.5px;
 }
 
+/* ===========================================================================
+   NUOVO BOX CITAZIONE (variante chiara/elegante) — aggiunto da Claude
+   (29/08/2026) su richiesta di Angelo: da testare prima sul profilo di
+   Angelo (angelo-caramia.html), non sostituisce .articolo-citazione-finale
+   che resta invariata e condivisa dalle altre pagine.
+=========================================================================== */
+.profilo-citazione-box {
+    position: relative;
+    background: linear-gradient(135deg, #fdf6ec 0%, #fdf1e3 100%);
+    border-radius: 16px;
+    padding: 46px 48px 38px 48px;
+    margin: 40px auto 30px auto;
+    max-width: 700px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+    overflow: hidden;
+}
+.profilo-citazione-box::before {
+    content: 'C';
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 5.5rem;
+    color: #f39c12;
+    opacity: 0.22;
+    position: absolute;
+    top: -8px;
+    left: 22px;
+    line-height: 1;
+}
+.profilo-citazione-box-testo {
+    font-family: 'Raleway', sans-serif;
+    font-style: italic;
+    font-size: 1.3rem;
+    line-height: 1.6;
+    color: #2c3e50;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+.profilo-citazione-box-autore {
+    display: inline-block;
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.8em;
+    color: #f39c12;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 18px;
+    padding-top: 10px;
+    border-top: 2px solid #f39c12;
+}
+.profilo-citazione-box-autore:empty {
+    display: none;
+}
+@media (max-width: 600px) {
+    .profilo-citazione-box {
+        padding: 38px 24px 30px 24px;
+    }
+    .profilo-citazione-box-testo {
+        font-size: 1.1rem;
+    }
+    .profilo-citazione-box::before {
+        font-size: 4rem;
+    }
+}
+
 /* ==============================
    BIBLIOGRAFIA A TENDINA
 ============================== */
@@ -1927,6 +1991,16 @@ footer a:hover {
 .eplab-founders-sep {
   margin: 0 0.6rem;
   color: #f39c12;
+}
+
+.eplab-founder-avatar {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    object-fit: cover;
+    vertical-align: middle;
+    margin-right: 8px;
+    border: 2px solid #f39c12;
 }
 
 .eplab-cosa-grid {
