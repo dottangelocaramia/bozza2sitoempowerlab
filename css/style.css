@@ -2334,3 +2334,24 @@ a.servizio-card {
     color: #2c3e50;
     margin: 0;
 }
+
+
+/* ===========================================================================
+   PAGINA CONTATTI — card per ogni canale di contatto (contatti.html)
+   aggiunto da Claude (29/08/2026) su richiesta di Angelo: solo restyling
+   estetico, nessun bottone/link e' stato spostato o rimosso.
+=========================================================================== */
+.contatto-card {
+    background: #fff8f4;
+    border-left: 4px solid #f39c12;
+    border-radius: 8px;
+    padding: 22px 26px;
+    margin-bottom: 22px;
+}
+.contatto-card h2 {
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+.contatto-card p {
+    margin-bottom: 0;
+}
