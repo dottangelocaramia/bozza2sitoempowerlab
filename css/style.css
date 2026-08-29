@@ -2026,14 +2026,14 @@ footer a:hover {
 }
 
 .eplab-cosa-card:hover {
-  border-color: #f39c12;
+  border-color: var(--tema-colore, #f39c12);
   transform: translateY(-3px);
 }
 
 .eplab-cosa-card i {
   display: block;
   font-size: 1.8rem;
-  color: #f39c12;
+  color: var(--tema-colore, #f39c12);
   margin-bottom: 0.6rem;
 }
 
@@ -2381,7 +2381,7 @@ footer a:hover {
 }
 .ambito-card i {
     font-size: 1.9rem;
-    color: #4f46e5;
+    color: var(--tema-colore, #4f46e5);
 }
 .ambito-card span {
     font-family: 'Raleway', sans-serif;
@@ -2391,8 +2391,8 @@ footer a:hover {
 }
 .ambito-card:hover {
     transform: scale(1.06) translateY(-4px);
-    box-shadow: 0 10px 24px rgba(79, 70, 229, 0.2);
-    border-color: #4f46e5;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+    border-color: var(--tema-colore, #4f46e5);
 }
 
 /* ===========================================================================
