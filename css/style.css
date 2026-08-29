@@ -861,6 +861,37 @@ color:#27ae60;
 
 }
 
+/* ===========================================================================
+   CARD SERVIZI PRINCIPALI (index.html) — corretto da Claude (29/08/2026) su
+   segnalazione di Angelo: prima condividevano la classe .servizi-grid con
+   servizi.html/Formazione.html (che nel frattempo era diventata una grid con
+   colonne minmax(230px,1fr)), causando card troppo vicine/sovrapposte in home.
+   Ora hanno una griglia dedicata. Icone aggiunte, colore blu #2596be fisso su
+   tutte (eccezione voluta da Angelo alla regola "un colore per argomento":
+   qui sono le card principali della home).
+=========================================================================== */
+.servizi-principali-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.servizio-card-home {
+    text-align: center;
+    border-top: 5px solid #2596be;
+}
+
+.servizio-card-home:hover {
+    border-color: #2596be;
+}
+
+.servizio-card-home .servizio-card-icona {
+    font-size: 2.2rem;
+    color: #2596be;
+    margin-bottom: 12px;
+}
+
 
 
 
