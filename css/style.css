@@ -2446,3 +2446,64 @@ a.servizio-card {
 .contatto-card p {
     margin-bottom: 0;
 }
+
+/* ==============================
+   PULSANTE FLOTTANTE WHATSAPP
+   Aggiunto da Claude (29/08/2026) su richiesta di Angelo.
+   Iniettato tramite template/footer.html: visibile su tutte le pagine presenti e future.
+   ============================== */
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 58px;
+  height: 58px;
+  background-color: #25d366;   /* verde ufficiale WhatsApp */
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.9rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  z-index: 9999;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+}
+
+@media (max-width: 600px) {
+  .whatsapp-float {
+    width: 52px;
+    height: 52px;
+    bottom: 16px;
+    right: 16px;
+    font-size: 1.7rem;
+  }
+}
+
+/* ===========================
+   PULSANTE WHATSAPP nella CTA form contatti (supporto-psicologico.html)
+   Aggiunto da Claude (29/08/2026) su richiesta di Angelo
+=========================== */
+.whatsapp-cta-button {
+    background: #25d366;
+    color: white;
+    padding: 14px 26px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 12px;
+}
+
+.whatsapp-cta-button:hover {
+    background: #1ebc59;
+    color: white;
+}
