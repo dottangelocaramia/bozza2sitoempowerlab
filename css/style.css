@@ -732,6 +732,10 @@ p {
         margin-top: 16px;
     }
 
+    .contatti-canali-wrapper {
+        padding: 0 16px;
+    }
+
     .team {
         padding: 24px 16px;
         margin-top: 16px;
@@ -870,11 +874,21 @@ color:#27ae60;
    tutte (eccezione voluta da Angelo alla regola "un colore per argomento":
    qui sono le card principali della home).
 =========================================================================== */
+/* Corretto ulteriormente da Claude (29/08/2026) su richiesta di Angelo: le card
+   toccavano i margini della pagina (la sezione non aveva un contenitore con
+   larghezza massima, a differenza del resto del sito) — ora e' centrata con la
+   stessa larghezza massima di .container (900px) e margini laterali coerenti.
+   Con questa larghezza e minmax(240px,1fr) le card si dispongono al massimo in
+   3 per riga, andando a capo sulle righe successive e su mobile. */
 .servizi-principali-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 30px;
     margin-top: 40px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 35px;
 }
 
 .servizio-card-home {
@@ -887,6 +901,9 @@ color:#27ae60;
 }
 
 .servizio-card-home:hover {
+    /* Ingrandimento leggero in stile .ambito-card, invece del solo bordo colorato */
+    transform: scale(1.04) translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.15);
     border-color: #2596be;
 }
 
@@ -894,6 +911,20 @@ color:#27ae60;
     font-size: 2.2rem;
     color: #2596be;
     margin-bottom: 12px;
+}
+
+.servizio-card-home h3 {
+    transition: color 0.3s;
+}
+
+.servizio-card-home:hover h3 {
+    color: #f39c12; /* arancione del logo, per evidenziare la card al passaggio del mouse */
+}
+
+@media (max-width: 700px) {
+    .servizi-principali-grid {
+        padding: 0 16px;
+    }
 }
 
 
@@ -1816,44 +1847,6 @@ h1, h2, h3 {
     letter-spacing: 0.3px; /* micro spacing */
 }
 
-/* ===========================================================================
-   TITOLO DI PAGINA EVIDENZIATO — aggiunto da Claude (29/08/2026) su richiesta
-   di Angelo: stile piu' curato per i titoli di articoli.html, servizi.html e
-   chi-siamo.html (segnalati come troppo standard/asettici). Non tocca lo
-   stile h1 di base, usato anche da index/FAQ/contatti che Angelo vuole
-   lasciare invariate.
-=========================================================================== */
-.titolo-pagina-evidenziato {
-    text-align: center;
-}
-
-.titolo-pagina-evidenziato .titolo-accento {
-    display: block;
-    width: 46px;
-    height: 4px;
-    margin: 0 auto 16px auto;
-    border-radius: 4px;
-    background: linear-gradient(90deg, #2596be, #f39c12);
-}
-
-.titolo-pagina-evidenziato h1 {
-    font-size: 2.5rem;
-    font-weight: 800;
-    letter-spacing: -0.5px;
-    color: #2c3e50; /* fallback per browser senza background-clip:text */
-    background: linear-gradient(90deg, #2c3e50 0%, #2596be 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    display: inline-block;
-}
-
-@media (max-width: 600px) {
-    .titolo-pagina-evidenziato h1 {
-        font-size: 2rem;
-    }
-}
-
 
 
 
@@ -2349,8 +2342,8 @@ footer a:hover {
 
 .argomento-link {
     display: block;
-    padding: 14px 16px;
-    margin-top: 12px;
+    padding: 11px 16px;
+    margin-top: 8px;
     border-radius: 8px;
     background: white;
     border: 1px solid #eee;
@@ -2367,14 +2360,15 @@ footer a:hover {
     display: block;
     color: #2c3e50;
     font-weight: 700;
-    font-size: 1.08em;
-    margin-bottom: 4px;
+    font-size: 0.92em;
+    margin-bottom: 0;
 }
 
+/* Nascosto da Claude (29/08/2026) su richiesta di Angelo: l'elenco aperto
+   mostrava anche il sottotitolo, rendendolo troppo lungo. Il markup resta nel
+   file (non e' stato tolto testo), solo non viene piu' mostrato. */
 .argomento-link-desc {
-    display: block;
-    color: #666;
-    font-size: 1em;
+    display: none;
 }
 
 .argomento-link-autore {
@@ -2546,6 +2540,12 @@ a.servizio-card {
    aggiunto da Claude (29/08/2026) su richiesta di Angelo: solo restyling
    estetico, nessun bottone/link e' stato spostato o rimosso.
 =========================================================================== */
+.contatti-canali-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 35px;
+}
+
 .contatto-card {
     background: #fff8f4;
     border-left: 4px solid #f39c12;
