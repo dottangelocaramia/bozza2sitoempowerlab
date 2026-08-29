@@ -882,7 +882,7 @@ color:#27ae60;
 /* Per citazioni brevi ad effetto */
 .box-invisibile-citazioni {
   width: 90%;              /* su mobile occupa il 90% evitando di toccare i bordi */
-  max-width: 620px;        /* più stretto per non disperdere la citazione */
+  max-width: 800px;        /* allargato da Claude (29/08/2026) su richiesta di Angelo: evita che frasi lunghe si spezzino in modo scomodo (es. una sola parola a capo) */
   margin-left: auto;       /* centratura orizzontale */
   margin-right: auto;      /* centratura orizzontale */
   margin-top: 2rem;        /* più spazio sopra per dare respiro alla citazione */
@@ -2331,6 +2331,7 @@ a.servizio-card {
     font-family: 'Raleway', sans-serif;
     font-style: italic;
     font-size: 1.25rem;
+    line-height: 1.5;
     color: #2c3e50;
     margin: 0;
 }
