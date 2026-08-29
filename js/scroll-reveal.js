@@ -24,6 +24,13 @@
     }, { threshold: 0.15 });
 
     items.forEach(function (el) { observer.observe(el); });
+
+    // Rete di sicurezza (29/08/2026): se per qualsiasi motivo un elemento non dovesse
+    // ricevere "reveal-visible" entro pochi secondi (tab aperta in background, quirk del
+    // browser, ecc.), lo rende comunque visibile invece di lasciarlo invisibile per sempre.
+    setTimeout(function () {
+      items.forEach(function (el) { el.classList.add('reveal-visible'); });
+    }, 2500);
   }
 
   if (document.readyState === 'loading') {
