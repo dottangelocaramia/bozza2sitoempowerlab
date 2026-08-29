@@ -733,7 +733,7 @@ p {
     }
 
     .contatti-canali-wrapper {
-        padding: 0 16px;
+        padding: 16px 16px 0 16px;
     }
 
     .team {
@@ -2543,7 +2543,11 @@ a.servizio-card {
 .contatti-canali-wrapper {
     max-width: 900px;
     margin: 0 auto;
-    padding: 0 35px;
+    padding: 25px 35px 0 35px;   /* spazio verticale che prima dava il box bianco (.container) */
+}
+
+.contatti-canali-wrapper + .contatti-canali-wrapper {
+    padding-top: 10px;   /* un po' meno tra il paragrafo introduttivo e le card sotto */
 }
 
 .contatto-card {
@@ -2635,8 +2639,18 @@ a.servizio-card {
 }
 
 .founder-card {
+    /* Ridisegnato da Claude (29/08/2026) su richiesta di Angelo: prima le due colonne
+       non avevano uno sfondo/bordo proprio (ereditavano solo un piccolo divisorio da
+       .profilo-preview, pensato per profili impilati) e sembravano un blocco unico
+       affiancato invece di due colonne ben separate. Ora ciascuna e' una card a se'. */
     flex: 1 1 320px;
     min-width: 0;
+    margin-top: 0;
+    padding: 26px 24px;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
 }
 
 .founder-card-intestazione {
