@@ -1812,6 +1812,44 @@ h1, h2, h3 {
     letter-spacing: 0.3px; /* micro spacing */
 }
 
+/* ===========================================================================
+   TITOLO DI PAGINA EVIDENZIATO — aggiunto da Claude (29/08/2026) su richiesta
+   di Angelo: stile piu' curato per i titoli di articoli.html, servizi.html e
+   chi-siamo.html (segnalati come troppo standard/asettici). Non tocca lo
+   stile h1 di base, usato anche da index/FAQ/contatti che Angelo vuole
+   lasciare invariate.
+=========================================================================== */
+.titolo-pagina-evidenziato {
+    text-align: center;
+}
+
+.titolo-pagina-evidenziato .titolo-accento {
+    display: block;
+    width: 46px;
+    height: 4px;
+    margin: 0 auto 16px auto;
+    border-radius: 4px;
+    background: linear-gradient(90deg, #2596be, #f39c12);
+}
+
+.titolo-pagina-evidenziato h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: #2c3e50; /* fallback per browser senza background-clip:text */
+    background: linear-gradient(90deg, #2c3e50 0%, #2596be 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+@media (max-width: 600px) {
+    .titolo-pagina-evidenziato h1 {
+        font-size: 2rem;
+    }
+}
+
 
 
 
@@ -1954,8 +1992,29 @@ footer a:hover {
    =========================================================================== */
 
 .eplab-hero {
-  padding: 56px 40px;                 /* più respiro verticale della .hero standard */
-  border-bottom: 4px solid #f39c12;   /* accento arancione in fondo alla hero */
+  /* Ridisegnato da Claude (29/08/2026) su richiesta di Angelo: il box era
+     percepito come troppo rigido/piatto (rettangolo scuro pieno con un
+     bordo netto in fondo). Ora ha profondità (gradiente + bagliore arancio
+     in un angolo) e un piccolo accento sfumato centrale al posto del bordo
+     netto, mantenendo la stessa palette (blu scuro #2c3e50, arancione #f39c12). */
+  position: relative;
+  overflow: hidden;
+  padding: 60px 40px 50px 40px;        /* più respiro verticale della .hero standard */
+  border-radius: 16px;
+  border-bottom: none;
+  background:
+    radial-gradient(circle at 85% 12%, rgba(243,156,18,0.22), transparent 55%),
+    linear-gradient(135deg, #1f2d38 0%, #2c3e50 55%, #34495e 100%);
+}
+
+.eplab-hero::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 4px;
+  margin: 22px auto 0 auto;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #f39c12, #2596be);
 }
 
 .eplab-hero h1 {
