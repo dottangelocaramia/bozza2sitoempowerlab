@@ -2230,6 +2230,22 @@ footer a:hover {
 .reveal-up:nth-child(5) { transition-delay: 0.32s; }
 .reveal-up:nth-child(6) { transition-delay: 0.4s; }
 
+/* variante 'dall'alto verso il basso', stesso meccanismo di .reveal-up */
+.reveal-down {
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal-down.reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.reveal-down:nth-child(2) { transition-delay: 0.08s; }
+.reveal-down:nth-child(3) { transition-delay: 0.16s; }
+.reveal-down:nth-child(4) { transition-delay: 0.24s; }
+.reveal-down:nth-child(5) { transition-delay: 0.32s; }
+.reveal-down:nth-child(6) { transition-delay: 0.4s; }
+
 /* ===========================================================================
    FOTO PROFILO — comparsa da destra (solo dove si aggiunge questa classe)
    aggiunto da Claude (29/08/2026) su richiesta di Angelo per angelo-caramia.html

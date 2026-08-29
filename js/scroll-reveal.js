@@ -1,11 +1,11 @@
 // scroll-reveal.js — aggiunto da Claude (29/08/2026) su richiesta di Angelo.
-// Applica un effetto di comparsa dal basso verso l'alto agli elementi con
-// classe "reveal-up" quando entrano nell'area visibile durante lo scroll.
+// Applica un effetto di comparsa (dal basso o dall'alto) agli elementi con
+// classe "reveal-up" o "reveal-down" quando entrano nell'area visibile durante lo scroll.
 // Riutilizzabile su qualunque pagina: basta includere questo script e dare
-// la classe "reveal-up" agli elementi che devono comparire allo scroll.
+// la classe "reveal-up" (dal basso) o "reveal-down" (dall'alto) agli elementi.
 (function () {
   function initReveal() {
-    var items = document.querySelectorAll('.reveal-up');
+    var items = document.querySelectorAll('.reveal-up, .reveal-down');
     if (!items.length) return;
 
     if (!('IntersectionObserver' in window)) {
