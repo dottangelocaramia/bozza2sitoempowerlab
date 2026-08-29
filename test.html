@@ -152,6 +152,10 @@ fetch("template/footer.html")
 });
 </script>
 
+<!-- Script aggiunto da Claude (29/08/2026): mancava, per questo le card dei test (classe
+     reveal-down) restavano invisibili (opacita' 0 permanente) pur essendo cliccabili. -->
+<script src="js/scroll-reveal.js"></script>
+
 <script>
   var cards = document.querySelectorAll('.feedback-card');
   var current = 0;
