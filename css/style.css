@@ -1253,7 +1253,14 @@ color:#27ae60;
 
 /* IMMAGINE con trasparenza elegante */
 .articolo-immagine {
-    margin: 30px 0;               /* spazio sopra e sotto l'immagine */
+    /* Corretto da Claude (02/10/2026) su richiesta di Angelo: su desktop il ritaglio
+       fisso (830px di larghezza circa per 280px di altezza, rapporto ~3:1) tagliava
+       troppo le immagini reali (rapporto tipico 1.3:1 - 1.8:1), perdendone parte.
+       Ora il riquadro e' un po' piu' alto e leggermente piu' stretto (max-width,
+       centrato), cosi' si vede piu' immagine senza che il blocco diventi troppo alto.
+       Su mobile il comportamento restava gia' buono e non e' stato toccato. */
+    max-width: 750px;
+    margin: 30px auto;            /* spazio sopra/sotto e centratura orizzontale */
     border-radius: 10px;          /* angoli arrotondati */
     overflow: hidden;             /* nasconde gli angoli dell'img */
     opacity: 0.82;                /* trasparenza — abbassa verso 0.6 per più trasparenza */
@@ -1266,7 +1273,7 @@ color:#27ae60;
 
 .articolo-immagine img {
     width: 100%;                  /* occupa tutta la larghezza del container */
-    height: 280px;                /* altezza fissa — modifica per più o meno alta */
+    height: 380px;                /* altezza fissa — modifica per più o meno alta */
     object-fit: cover;            /* ritaglia mantenendo le proporzioni */
     display: block;
 }
