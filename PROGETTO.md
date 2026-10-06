@@ -98,9 +98,10 @@ Per il dettaglio esatto di ogni modifica, consulta la cronologia dei commit (`gi
 
 ## Problemi noti / cose da tenere d'occhio
 
+- Le sezioni "Cosa dicono di noi" di Formazione.html, corsi.html, percorsi.html, supporto-psicologico.html e workbook.html contengono ancora il feedback segnaposto "Inserisci qui il testo del feedback del cliente o studente" (test.html ha già 3 feedback reali): da sostituire con feedback reali o rimuovere prima della pubblicazione.
 - Il pulsante `.faq-cta-button`, al passaggio del mouse, cambia colore del testo in arancione — confermato voluto da Angelo, non un bug.
 - Tutti i testi-bozza scritti da Claude (FAQ, descrizioni workbook, contenuto di workbook1-3, sottotitolo autostima1.html, categorie articoli.html) vanno riletti e rifiniti da Angelo.
-- `esempio-con-chat.html`: scopo ancora da chiarire con Angelo.
+- ~~`esempio-con-chat.html`: scopo ancora da chiarire con Angelo.~~ **Chiuso (06/10/2026)**: la pagina era già stata eliminata il 26/08/2026 nelle "Correzioni tecniche rapide (Fase 1)" approvate da Angelo (commit `b2ea7d8`); non esiste più nel repository e nulla la richiama.
 - Il footer (template/footer.html) mostra la tagline abbreviata "Psicologia e Formazione" (senza "Crescita personale"): **confermato da Angelo (29/08/2026)** che va bene così, non va uniformata.
 - training-autogeno.html, tutoraggio.html e le 5 pagine corsi restano contenuti bozza scritti da Claude, da rileggere e rifinire da Angelo.
 - ~~Alcuni file (chi-siamo.html, contatti.html, index.html) avevano piccoli sbilanciamenti preesistenti tra tag di apertura/chiusura~~ **Risolto (29/08/2026)**: i 3 sbilanciamenti pre-esistenti sono stati corretti (rimossi due `</div>` orfani/duplicati in chi-siamo.html e index.html, aggiunta una `</a>` mancante nel titolo Instagram di contatti.html), senza alcuna variazione visiva.
