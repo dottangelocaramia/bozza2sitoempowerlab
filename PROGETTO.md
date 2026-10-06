@@ -2,7 +2,7 @@
 
 *Questo file vive dentro il repository e va aggiornato quando cambia qualcosa di rilevante. Serve per ritrovare velocemente il filo del progetto anche dopo giorni o settimane di pausa.*
 
-*Ultimo aggiornamento: 2 ottobre 2026 (tutte le immagini mancanti risolte, fix ritaglio immagini articoli, viola ammorbidito, card home/articoli/Founders ridisegnate, contatti.html senza sfondi bianchi superflui — pushato su GitHub, main `49334d0`; backup esterno rigenerato il 02/10/2026)*
+*Ultimo aggiornamento: 6 ottobre 2026 (articolo sul lutto completato con testo e riferimenti verificati; schede test riscritte e rinominate; pushato su GitHub)*
 
 ## Dove siamo
 
@@ -18,8 +18,8 @@ Il sito è statico: niente framework, niente build. Ogni pagina è un file `.htm
 
 ```
 index.html, chi-siamo.html, servizi.html, ecc.   → pagine del sito, una per file
-test.html                                         → pagina servizio Test psicologici, con 3 card verso test1/2/3.html
-test1.html, test2.html, test3.html                → schede di dettaglio per singoli test (bozza di esempio)
+test.html                                         → pagina servizio Test psicologici, con 3 card verso autostima-test.html / DASS-test.html / TIPI-test.html
+autostima-test.html, DASS-test.html, TIPI-test.html → schede di dettaglio per singoli test (ex test1/2/3.html, rinominate il 06/10/2026)
 workbook.html                                     → pagina servizio Workbook, con 3 card verso workbook1/2/3.html
 workbook1.html, workbook2.html, workbook3.html    → schede di dettaglio per i 3 workbook reali (testo interno bozza)
 autostima1.html, autostima2.html                  → articoli Autostima (autostima2.html in attesa di contenuto reale)
@@ -38,7 +38,7 @@ Backup e prova/                                   → versioni precedenti/di pro
 
 Il menu principale (in `template/header.html`) collega: Home, Chi siamo, EmpowerLab, Servizi (dropdown: Supporto psicologico, Formazione, Percorsi, Test, Workbook), Articoli, FAQ, Contatti.
 
-`test.html` mostra 3 card (Autostima/Ansia/Stress, bozze di esempio) che portano a `test1.html`, `test2.html`, `test3.html`. `workbook.html` mostra 3 card che portano a `workbook1.html`, `workbook2.html`, `workbook3.html` (i 3 workbook reali forniti da Angelo). Ogni pagina di dettaglio ha un bottone "Contattaci" (attivo, verso contatti.html) e un bottone "Acquista" volutamente disattivato, con nota che spiega che per ora l'acquisto richiede un contatto diretto — da riattivare quando si passerà alla fase intermedia con i pagamenti.
+`test.html` mostra 3 card (Autostima / Benessere emotivo / Personalità) che portano a `autostima-test.html`, `DASS-test.html`, `TIPI-test.html`. `workbook.html` mostra 3 card che portano a `workbook1.html`, `workbook2.html`, `workbook3.html` (i 3 workbook reali forniti da Angelo). Ogni pagina di dettaglio ha un bottone "Contattaci" (attivo, verso contatti.html) e un bottone "Acquista" volutamente disattivato, con nota che spiega che per ora l'acquisto richiede un contatto diretto — da riattivare quando si passerà alla fase intermedia con i pagamenti.
 
 `articoli.html` è organizzata in una tendina colorata per argomento (Autostima, Ansia, Articoli pubblicati su riviste). Il blocco Autostima ora contiene anche una voce per `autostima2.html` (titolo/descrizione segnaposto, in attesa del contenuto reale). I due articoli reali (`autostima1.html`, `ansia-universita.html`) si linkano a vicenda tramite parole ipertestuali (classe `.link-articolo`).
 
@@ -57,7 +57,7 @@ Il menu principale (in `template/header.html`) collega: Home, Chi siamo, Empower
 9. **Rimosso `Backup e prova/contatti back.html`** (email placeholder obsoleta), su richiesta di Angelo.
 10. **`universita_ansia.html` rinominata in `ansia-universita.html`**, tutti i link aggiornati.
 11. **`autostima2.html` completato**: Angelo ha scritto il contenuto reale (tema: autostima legata alla performance/perfezionismo); Claude ha allineato titolo, meta description, keywords, Open Graph e schema.org al testo reale, e aggiunto link ipertestuali reciproci con autostima1.html.
-12. **Pagine di dettaglio test** (`test1/2/3.html`) e **workbook** (`workbook1/2/3.html`): ciascuna con CTA "Contattaci" attiva e bottone "Acquista" disattivato, in attesa della fase intermedia con i pagamenti.
+12. **Pagine di dettaglio test** (`autostima-test.html`, `DASS-test.html`, `TIPI-test.html`) e **workbook** (`workbook1/2/3.html`): ciascuna con CTA "Contattaci" attiva e bottone "Acquista" disattivato, in attesa della fase intermedia con i pagamenti.
 13. **Backup completo esterno a GitHub** (file + storico Git), salvato sul Mac di Angelo. Da rigenerare dopo le modifiche dei punti 14-15.
 14. **Ottimizzazione SEO estesa a tutto il sito (28/08/2026)**: su richiesta esplicita di Angelo, titoli, meta description, keywords e Open Graph rivisti su tutte le pagine servizi (servizi.html e le 5 sottopagine, più corsi.html) e profilo (chi-siamo.html, empowerlab.html, angelo-caramia.html, amodio.html); corretto un titolo duplicato in empowerlab.html e rimossi commenti-placeholder obsoleti in 4 pagine servizi; aggiunti dati strutturati BreadcrumbList su tutte le pagine servizi/articoli/profilo (prima assenti) e schema.org Service sulle 5 pagine servizio principali; allineate le immagini reali (al posto del logo generico) in og:image e schema.org di autostima1.html, autostima2.html e ansia-universita.html e nelle pagine di Angelo e Rosa; aggiunto un link ipertestuale reciproco tra autostima1.html e autostima2.html.
 15. **`empowerlab.html` completato e rebranding "Empower Lab Psy" (28/08/2026)**: Angelo ha scritto il testo reale della pagina EmpowerLab (missione, chi siamo, cosa facciamo); Claude lo ha impaginato in paragrafi distinti con due titoli di sezione, aggiunto un bottone "Contattaci" finale e riposizionato il link al profilo Instagram già presente in pagina. Su richiesta esplicita di Angelo, il brand "Empower Lab"/"EmpowerLab" è stato rinominato in "Empower Lab Psy" ovunque nel sito (title, meta description, keywords, Open Graph, schema.org e testo), incluso il template header/footer (che si propaga a tutte le pagine) e il testo dei bottoni Instagram ("Empower_Lab" → "Empower_Lab_Psy"), per uniformità con il profilo Instagram e l'email (@empower_lab_psy). Le icone Instagram cliccabili (piccola/media/grande, più quella nei bottoni) sono state ingrandite del 50%. Non toccati i file nella cartella "Backup e prova" (bozze/backup interni di Angelo, non pagine live del sito).
@@ -81,6 +81,8 @@ Il menu principale (in `template/header.html`) collega: Home, Chi siamo, Empower
 
 31. **Quinto-settimo giro e sistemazione immagini (29/08–02/10/2026)**: su feedback via via più puntuale di Angelo, sono stati sistemati: il viola di Formazione (ammorbidito), un bug reale nella home (le card "I principali servizi" condividevano una classe CSS con le card di servizi.html/Formazione.html ed erano finite sovrapposte/troppo vicine ai margini — ora hanno una griglia dedicata, icone blu e hover con ingrandimento/titolo arancione), articoli.html ridisegnata come griglia di card con icona (elenco aperto semplificato a solo titolo), i Founders di chi-siamo.html trasformati in due card separate e affiancate, l'Instagram di chi-siamo.html uniformato a quello di contatti.html, e contatti.html liberata completamente dallo sfondo bianco superfluo (titolo, paragrafo e i 3 riquadri canale stanno ora direttamente sulla pagina). Un tentativo di restyling dei titoli di pagina (articoli.html/servizi.html/chi-siamo.html) è stato fatto e poi ripristinato su richiesta esplicita di Angelo — resta solo il nuovo box hero di empowerlab.html, approvato. Il 02/10/2026: Angelo ha caricato direttamente su GitHub tutte le immagini che mancavano (formazione-fomo.html, confronto-social.html, metodo-studio.html, gestione-lutto-death-education.html) più una nuova immagine per autostima2.html in sostituzione della precedente (lui stesso ha aggiornato correttamente i riferimenti nel codice); Claude ha sincronizzato il repository, aggiunto il tag immagine mancante in gestione-lutto-death-education.html (con og:image e schema.org coerenti), e corretto il ritaglio delle immagini di apertura articoli su desktop (box leggermente più alto e più stretto, cosi' si vede più immagine senza tagliarla troppo — il comportamento mobile non è stato toccato). Tutti i commit pushati su GitHub (main a `49334d0`). Backup esterno rigenerato il 02/10/2026.
 
+32. **Articolo lutto + schede test (06/10/2026)**: Angelo aveva modificato direttamente su GitHub test.html, privacy.html, articoli.html (nuovo articolo OPI Bari sul tumore/coping), supporto-psicologico.html e training-autogeno.html: repository sincronizzato prima di lavorare. In `gestione-lutto-death-education.html` integrato il testo completo fornito da Angelo (verbatim) più la tendina "Riferimenti bibliografici": pubblicati solo i 3 riferimenti verificati (Schonfeld et al. 2024; Pennebaker & Evans 2014; Linder et al. 2024); 3 riferimenti **in sospeso** (Neimeyer 2023 — il capitolo esiste ma a 3 autori; Testoni 2018 OMEGA 76(3) 250–268 — non trovato, in quel fascicolo/pagine ci sono altri autori; Corr 2016 — non trovato) lasciati in un commento HTML nel sorgente finché Angelo non li conferma/corregge. Le 3 schede test sono state rinominate con il nome del test (`test1.html`→`autostima-test.html`, `test2.html`→`DASS-test.html`, `test3.html`→`TIPI-test.html`; aggiornati link in test.html, canonical/og:url e sitemap.xml) e le descrizioni riscritte in chiave informativo-commerciale senza nominare i test nel testo: autostima multidimensionale (fisico/relazionale/intellettuale, in fase di pubblicazione scientifica, autori Caramia e Amodio), screening ansia-stress-depressione, tratti di personalità (senza definire le dimensioni). Commit `0a3c360` e `c6487e0`.
+
 Per il dettaglio esatto di ogni modifica, consulta la cronologia dei commit (`git log`).
 
 ## Decisioni prese
@@ -97,7 +99,7 @@ Per il dettaglio esatto di ogni modifica, consulta la cronologia dei commit (`gi
 ## Problemi noti / cose da tenere d'occhio
 
 - Il pulsante `.faq-cta-button`, al passaggio del mouse, cambia colore del testo in arancione — confermato voluto da Angelo, non un bug.
-- Tutti i testi-bozza scritti da Claude (FAQ, descrizioni workbook, contenuto di test1-3/workbook1-3, sottotitolo autostima1.html, categorie articoli.html) vanno riletti e rifiniti da Angelo.
+- Tutti i testi-bozza scritti da Claude (FAQ, descrizioni workbook, contenuto di workbook1-3, sottotitolo autostima1.html, categorie articoli.html) vanno riletti e rifiniti da Angelo.
 - `esempio-con-chat.html`: scopo ancora da chiarire con Angelo.
 - Il footer (template/footer.html) mostra la tagline abbreviata "Psicologia e Formazione" (senza "Crescita personale"): **confermato da Angelo (29/08/2026)** che va bene così, non va uniformata.
 - training-autogeno.html, tutoraggio.html e le 5 pagine corsi restano contenuti bozza scritti da Claude, da rileggere e rifinire da Angelo.
@@ -105,7 +107,7 @@ Per il dettaglio esatto di ogni modifica, consulta la cronologia dei commit (`gi
 
 ## Contenuti ancora da scrivere (lavoro di Angelo)
 
-Bio completa in `chi-siamo.html`, `empowerlab.html`; contenuto reale di `autostima2.html`; le pagine di dettaglio corsi/percorsi/profili non ancora scritte; contenuto reale (o scelta dei test/workbook definitivi) per `test1/2/3.html` e `workbook1/2/3.html`; revisione legale di `privacy.html`.
+Bio completa in `chi-siamo.html`, `empowerlab.html`; contenuto reale di `autostima2.html`; le pagine di dettaglio corsi/percorsi/profili non ancora scritte; contenuto reale (o scelta dei workbook definitivi) per `workbook1/2/3.html`; revisione legale di `privacy.html`.
 
 ## Prossimi passi possibili (roadmap, da approvare uno alla volta)
 
