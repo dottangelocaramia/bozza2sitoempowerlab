@@ -2,7 +2,7 @@
 
 *Questo file vive dentro il repository e va aggiornato quando cambia qualcosa di rilevante. Serve per ritrovare velocemente il filo del progetto anche dopo giorni o settimane di pausa.*
 
-*Ultimo aggiornamento: 6 ottobre 2026 (grassetto corretto in percorsi.html; commento feedback rimosso da Formazione.html — pushato su GitHub)*
+*Ultimo aggiornamento: 6 ottobre 2026 (feedback reali verificati in tutte le pagine e HTML riparato; link Privacy nel footer — pushato su GitHub)*
 
 ## Dove siamo
 
@@ -87,6 +87,8 @@ Il menu principale (in `template/header.html`) collega: Home, Chi siamo, Empower
 
 34. **Grassetto in percorsi.html e feedback (06/10/2026)**: su richiesta di Angelo corretti i refusi `<strng>` → `<strong>` in percorsi.html (2 punti: "cambiare davvero" e "cambiamenti concreti", ora in grassetto); rimosso da Formazione.html il commento HTML sui feedback segnaposto. **Feedback**: Angelo ha richiesto di nuovo la scrittura di testimonianze con nomi inventati da adattare in seguito ai feedback reali; Claude ha **declinato di nuovo** (testimonianze inventate e senza alcuna indicazione che lo siano risulterebbero autentiche su un sito pubblico) e ha proposto alternative: compilare lui i testi reali nei profili d'autore già predisposti in Formazione.html, nascondere temporaneamente le sezioni "Cosa dicono di noi" ancora vuote, e un messaggio-modello per raccogliere feedback reali con consenso.
 
+35. **Feedback inseriti da Angelo, controllo e privacy (06/10/2026)**: Angelo ha inserito a mano i feedback reali in Formazione, corsi, percorsi, supporto-psicologico, workbook (test.html li aveva già): ogni pagina ha i propri blocchi `.feedback-card`, non sono condivisi. Controllo strutturale di tutte e 6 le pagine: riparati due danni (in `supporto-psicologico.html` mancava il `<` di apertura del primo `<div class="feedback-card">`; in `Formazione.html` mancava il `</div>` che chiude `.container` prima dell'invito finale). Script a rotazione identici nelle 6 pagine (differiscono solo i commenti). Refusi nei testi dei feedback (infinte, perchè, preprare, implmentato, emzoini, sù) segnalati ad Angelo, NON modificati (contenuto suo). Aggiunto il link "Privacy" nel footer (`template/footer.html`). Controllo pre-pubblicazione privacy: nessun tracker/cookie/embed; presenti servizi esterni (Google Fonts da CDN, Font Awesome da cdnjs, Google Forms) — Angelo ha deciso di tenerli "per il momento"; decisione sull'eventuale self-hosting di font e icone rimandata. Il testo completo dell'informativa (sezione A) NON è ancora in `privacy.html`: in attesa che Angelo lo reincolli. **Dopo la migrazione/scelta hosting `privacy.html` va ricontrollata** (hosting, trasferimenti extra-UE, data di pubblicazione, eventuale self-hosting font/icone).
+
 Per il dettaglio esatto di ogni modifica, consulta la cronologia dei commit (`git log`).
 
 ## Decisioni prese
@@ -102,7 +104,8 @@ Per il dettaglio esatto di ogni modifica, consulta la cronologia dei commit (`gi
 
 ## Problemi noti / cose da tenere d'occhio
 
-- Le sezioni "Cosa dicono di noi" di Formazione.html, corsi.html, percorsi.html, supporto-psicologico.html e workbook.html contengono ancora il feedback segnaposto "Inserisci qui il testo del feedback del cliente o studente" (test.html ha già 3 feedback reali): da sostituire con feedback reali o rimuovere prima della pubblicazione.
+- ~~Segnaposto feedback in Formazione/corsi/percorsi/supporto-psicologico/workbook~~ **Risolto (06/10/2026)**: Angelo ha inserito i feedback reali; verificati e HTML riparato (vedi #35).
+- **Privacy**: `privacy.html` da aggiornare con il testo completo dell'informativa fornito da Angelo (ancora da reincollare) + titolo "Informativa sul trattamento dei dati personali" + riga "Ultimo aggiornamento"; le due caselle obbligatorie (lettura informativa/consenso dati salute) vanno create da Angelo nel Google Form; **ricontrollare tutta la pagina dopo la migrazione** (hosting, trasferimenti extra-UE). Servizi esterni ancora presenti: Google Fonts (CDN), Font Awesome (cdnjs), Google Forms; frase "nessuno strumento di tracciamento" da riverificare di conseguenza. Footer: mancano P.IVA / iscrizione Albo (da fornire, art. 7 D.Lgs. 70/2003 — da verificare con commercialista).
 - Il pulsante `.faq-cta-button`, al passaggio del mouse, cambia colore del testo in arancione — confermato voluto da Angelo, non un bug.
 - Tutti i testi-bozza scritti da Claude (FAQ, descrizioni workbook, contenuto di workbook1-3, sottotitolo autostima1.html, categorie articoli.html) vanno riletti e rifiniti da Angelo.
 - ~~`esempio-con-chat.html`: scopo ancora da chiarire con Angelo.~~ **Chiuso (06/10/2026)**: la pagina era già stata eliminata il 26/08/2026 nelle "Correzioni tecniche rapide (Fase 1)" approvate da Angelo (commit `b2ea7d8`); non esiste più nel repository e nulla la richiama.
