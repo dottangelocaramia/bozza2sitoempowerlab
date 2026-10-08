@@ -20,7 +20,7 @@ Il sito è statico: niente framework, niente build. Ogni pagina è un file `.htm
 index.html, chi-siamo.html, servizi.html, ecc.   → pagine del sito, una per file
 test.html                                         → pagina servizio Test psicologici, con 3 card verso autostima-test.html / ansia-stress-depressione-test.html / tratti-personalita-test.html
 autostima-test.html, ansia-stress-depressione-test.html, tratti-personalita-test.html → schede di dettaglio per singoli test (ex test1/2/3.html, rinominate il 06/10/2026)
-workbook.html                                     → pagina servizio Workbook, con 3 card verso workbook1/2/3.html
+workbook.html                                     → pagina servizio Workbook, con 3 card verso esp1/2/3-workbook.html
 esp1-workbook.html, esp2-workbook.html, esp3-workbook.html    → schede di dettaglio per i 3 workbook reali (testo interno bozza)
 autostima1.html, autostima2.html                  → articoli Autostima (autostima2.html in attesa di contenuto reale)
 ansia-universita.html                             → articolo Ansia (rinominato da universita_ansia.html il 28/08/2026)
@@ -60,6 +60,8 @@ Il menu principale (in `template/header.html`) collega: Home, Chi siamo, Empower
 
 9. **Workbook 1-3 (08/10/2026, commit `0573894`)** — contenuti forniti da Angelo (titolo con "?", sottotitolo "Esperimento #0N", frase in corsivo, Cos'è, Il meccanismo, Cosa troverai, Per chi è, Info pratiche) organizzati con sezioni, parole chiave in grassetto e link interni (supporto-psicologico, autostima1/2, confronto-social). Categorie: "Autostima e Decisioni", "Autostima e Confronto Sociale", "Ansia e Ossessioni" (la terza prima era "Ansia / Pensieri Ossessivi"). Nuove classi CSS `.workbook-frase` e `.workbook-nota`. Card di workbook.html, title/description/keywords e breadcrumb allineati. Refusi sistemati: "non sono a capire"→"non solo a capire", "l' hai"→"l'hai", "pratico e concreto"→"pratiche e concrete" (workbook3). Chi-siamo: testo aggiornato da Angelo (merge `38f4342`). Test: contenuti confermati da Angelo così come sono.
 
+10. **Workbook: rifiniture (08/10/2026)** — file rinominati `workbook1/2/3.html` → `esp1-workbook.html`, `esp2-workbook.html`, `esp3-workbook.html` (link, canonical, og:url, breadcrumb e sitemap allineati; i vecchi URL non esistono più); frase ad effetto in box semitrasparente con doppia linea fine (`.workbook-frase`); "Cosa troverai all'interno" in 6 riquadri con icona e numero (`.workbook-card-grid`/`.workbook-card`); link dagli articoli sull'autostima ai workbook: autostima1 "approvazione esterna" → esp1, autostima1 "dialogo interno" → esp3, autostima2 "asticella" → esp2.
+
 ## Decisioni prese
 
 - Repository di lavoro: `bozza2sitoempowerlab` (senza spazi, privata). Backup esterno periodico sul Mac di Angelo.
@@ -77,7 +79,7 @@ Il menu principale (in `template/header.html`) collega: Home, Chi siamo, Empower
 - ~~Segnaposto feedback in Formazione/corsi/percorsi/supporto-psicologico/workbook~~ **Risolto (06/10/2026)**: Angelo ha inserito i feedback reali; verificati e HTML riparato.
 - **Privacy**: informativa generica completata il 06/10/2026 (stand-by); il link "Privacy" non è più nel footer (08/10/2026). Restano: caselle obbligatorie nel Google Form (Angelo), data di pubblicazione `[[data di pubblicazione]]`, revisione legale, **ricontrollo completo dopo la migrazione**; P.IVA/Albo nel footer non necessari per ora (decisione di Angelo; art. 7 D.Lgs. 70/2003 da verificare con il commercialista se si cambia idea).
 - Il pulsante `.faq-cta-button`, al passaggio del mouse, cambia colore del testo in arancione — confermato voluto da Angelo, non un bug.
-- Tutti i testi-bozza scritti da Claude (FAQ, descrizioni workbook, contenuto di workbook1-3, sottotitolo autostima1.html, categorie articoli.html) vanno riletti e rifiniti da Angelo.
+- Tutti i testi-bozza scritti da Claude (FAQ, descrizioni workbook, contenuto di esp1-3-workbook, sottotitolo autostima1.html, categorie articoli.html) vanno riletti e rifiniti da Angelo.
 - ~~`esempio-con-chat.html`: scopo ancora da chiarire con Angelo.~~ **Chiuso (06/10/2026)**: la pagina era già stata eliminata il 26/08/2026 nelle "Correzioni tecniche rapide (Fase 1)" approvate da Angelo (commit `b2ea7d8`); non esiste più nel repository e nulla la richiama.
 - Il footer (template/footer.html) mostra la tagline abbreviata "Psicologia e Formazione" (senza "Crescita personale"): **confermato da Angelo (29/08/2026)** che va bene così, non va uniformata.
 - training-autogeno.html, tutoraggio.html e le 5 pagine corsi restano contenuti bozza scritti da Claude, da rileggere e rifinire da Angelo.
@@ -85,7 +87,7 @@ Il menu principale (in `template/header.html`) collega: Home, Chi siamo, Empower
 
 ## Contenuti ancora da scrivere (lavoro di Angelo)
 
-Bio completa in `chi-siamo.html` (contiene ancora la frase "Questa pagina presenterà il progetto…") e `empowerlab.html`; pagine corsi e percorsi da rifinire; contenuto reale (o scelta dei workbook definitivi) per `workbook1/2/3.html`; revisione legale di `privacy.html`.
+Bio completa in `empowerlab.html`; pagine corsi e percorsi da rifinire; contenuto reale (o scelta dei workbook definitivi) per `workbook1/2/3.html`; revisione legale di `privacy.html`.
 
 ## Prossimi passi possibili (roadmap, da approvare uno alla volta)
 
