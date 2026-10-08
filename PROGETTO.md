@@ -21,7 +21,7 @@ index.html, chi-siamo.html, servizi.html, ecc.   → pagine del sito, una per fi
 test.html                                         → pagina servizio Test psicologici, con 3 card verso autostima-test.html / ansia-stress-depressione-test.html / tratti-personalita-test.html
 autostima-test.html, ansia-stress-depressione-test.html, tratti-personalita-test.html → schede di dettaglio per singoli test (ex test1/2/3.html, rinominate il 06/10/2026)
 workbook.html                                     → pagina servizio Workbook, con 3 card verso workbook1/2/3.html
-workbook1.html, workbook2.html, workbook3.html    → schede di dettaglio per i 3 workbook reali (testo interno bozza)
+esp1-workbook.html, esp2-workbook.html, esp3-workbook.html    → schede di dettaglio per i 3 workbook reali (testo interno bozza)
 autostima1.html, autostima2.html                  → articoli Autostima (autostima2.html in attesa di contenuto reale)
 ansia-universita.html                             → articolo Ansia (rinominato da universita_ansia.html il 28/08/2026)
 privacy.html                                      → informativa privacy / trattamento dati, collegata da contatti.html
@@ -38,7 +38,7 @@ Backup e prova/                                   → versioni precedenti/di pro
 
 Il menu principale (in `template/header.html`) collega: Home, Chi siamo, EmpowerLab, Servizi (dropdown: Supporto psicologico, Formazione, Percorsi, Test, Workbook), Articoli, FAQ, Contatti.
 
-`test.html` mostra 3 card (Autostima / Benessere emotivo / Personalità) che portano a `autostima-test.html`, `ansia-stress-depressione-test.html`, `tratti-personalita-test.html`. `workbook.html` mostra 3 card che portano a `workbook1.html`, `workbook2.html`, `workbook3.html` (i 3 workbook reali forniti da Angelo). Ogni pagina di dettaglio ha un bottone "Contattaci" (attivo, verso contatti.html) e un bottone "Acquista" volutamente disattivato, con nota che spiega che per ora l'acquisto richiede un contatto diretto — da riattivare quando si passerà alla fase intermedia con i pagamenti.
+`test.html` mostra 3 card (Autostima / Benessere emotivo / Personalità) che portano a `autostima-test.html`, `ansia-stress-depressione-test.html`, `tratti-personalita-test.html`. `workbook.html` mostra 3 card che portano a `esp1-workbook.html`, `esp2-workbook.html`, `esp3-workbook.html` (i 3 workbook reali forniti da Angelo). Ogni pagina di dettaglio ha un bottone "Contattaci" (attivo, verso contatti.html) e un bottone "Acquista" volutamente disattivato, con nota che spiega che per ora l'acquisto richiede un contatto diretto — da riattivare quando si passerà alla fase intermedia con i pagamenti.
 
 `articoli.html` è organizzata in una tendina colorata per argomento (Autostima, Ansia, Articoli pubblicati su riviste). Il blocco Autostima ora contiene anche una voce per `autostima2.html` (titolo/descrizione segnaposto, in attesa del contenuto reale). I due articoli reali (`autostima1.html`, `ansia-universita.html`) si linkano a vicenda tramite parole ipertestuali (classe `.link-articolo`).
 
