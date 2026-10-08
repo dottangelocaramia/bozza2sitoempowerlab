@@ -233,6 +233,14 @@ h2 {
     margin-top: 30px;
 }
 
+/* Titoli di sezione della home: sono <h2> (la pagina ha un solo <h1> per la SEO) ma mantengono l'aspetto che avevano da <h1>. Aggiunto da Claude, ottobre 2026 */
+.titolo-sezione-home {
+    font-size: 2em;
+    font-weight: 700;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+}
+
 
 
 

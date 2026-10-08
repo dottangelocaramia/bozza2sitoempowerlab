@@ -4,21 +4,27 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Tutoraggio e Supporto allo studio | Empower Lab Psy</title>
+<title>Supporto allo studio e agli esami a Bari e Online | Empower Lab Psy</title>
 
 <!-- PAGINA DI DETTAGLIO creata da Claude (28/08/2026) su richiesta di Angelo, a partire dal titolo e dalla breve descrizione gia' presenti nella card di Formazione.html.
      Il testo delle sezioni "Di cosa si tratta", "Come funziona" e "A chi si rivolge" e' una bozza plausibile scritta da Claude (che riprende anche una frase reale di Angelo su metodo personalizzato gia' presente in Formazione.html): Angelo la riscrivera' con maggiore dettaglio. -->
-<meta name="description" content="Affiancamento personalizzato di Empower Lab Psy per affrontare lo studio, universitario e non, e migliorare metodo e risultati.">
-<meta name="keywords" content="tutoraggio, supporto allo studio, metodo di studio, Empower Lab Psy, Bari">
+<meta name="description" content="Tutoraggio a Bari e online: supporto agli esami universitari, metodo di studio e organizzazione. Affiancamento individuale con Empower Lab Psy.">
+<meta name="keywords" content="supporto esami Bari, tutoraggio universitario Bari, supporto allo studio, metodo di studio, preparazione esami, Empower Lab Psy">
 <meta name="author" content="Angelo Caramia & Rosa Amodio">
 <meta name="robots" content="index, follow">
 
-<meta property="og:title" content="Tutoraggio e Supporto allo studio | Empower Lab Psy">
-<meta property="og:description" content="Affiancamento personalizzato di Empower Lab Psy per affrontare lo studio, universitario e non, e migliorare metodo e risultati.">
+<meta property="og:title" content="Supporto allo studio e agli esami a Bari e Online | Empower Lab Psy">
+<meta property="og:description" content="Tutoraggio a Bari e online: supporto agli esami universitari, metodo di studio e organizzazione. Affiancamento individuale con Empower Lab Psy.">
 <meta property="og:image" content="https://tuosito.github.io/images/logo.png">
 <meta property="og:url" content="https://tuosito.github.io/tutoraggio.html">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="it_IT">
+<meta property="og:site_name" content="Empower Lab Psy">
+<meta property="og:image:alt" content="Logo di Empower Lab Psy">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Supporto allo studio e agli esami a Bari e Online | Empower Lab Psy">
+<meta name="twitter:description" content="Tutoraggio a Bari e online: supporto agli esami universitari, metodo di studio e organizzazione. Affiancamento individuale con Empower Lab Psy.">
+<meta name="twitter:image" content="https://tuosito.github.io/images/logo.png">
 
 <link rel="canonical" href="https://tuosito.github.io/tutoraggio.html">
 
@@ -28,10 +34,30 @@
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://tuosito.github.io/index.html"},
-    {"@type": "ListItem", "position": 2, "name": "Servizi", "item": "https://tuosito.github.io/servizi.html"},
-    {"@type": "ListItem", "position": 3, "name": "Formazione", "item": "https://tuosito.github.io/Formazione.html"},
-    {"@type": "ListItem", "position": 4, "name": "Tutoraggio e Supporto allo studio", "item": "https://tuosito.github.io/tutoraggio.html"}
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://tuosito.github.io/index.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Servizi",
+      "item": "https://tuosito.github.io/servizi.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Formazione",
+      "item": "https://tuosito.github.io/Formazione.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Tutoraggio e Supporto allo studio",
+      "item": "https://tuosito.github.io/tutoraggio.html"
+    }
   ]
 }
 </script>
@@ -39,11 +65,40 @@
 {
   "@context": "https://schema.org",
   "@type": "Service",
-  "serviceType": "Tutoraggio",
-  "name": "Tutoraggio e Supporto allo studio | Empower Lab Psy",
-  "description": "Affiancamento personalizzato di Empower Lab Psy per affrontare lo studio, universitario e non, e migliorare metodo e risultati.",
-  "provider": {"@type": "ProfessionalService", "name": "Empower Lab Psy", "url": "https://tuosito.github.io/index.html"},
-  "areaServed": {"@type": "City", "name": "Bari"}
+  "@id": "https://tuosito.github.io/tutoraggio.html#servizio",
+  "serviceType": "Tutoraggio universitario e supporto agli esami",
+  "name": "Supporto allo studio e agli esami a Bari e Online | Empower Lab Psy",
+  "description": "Tutoraggio a Bari e online: supporto agli esami universitari, metodo di studio e organizzazione. Affiancamento individuale con Empower Lab Psy.",
+  "url": "https://tuosito.github.io/tutoraggio.html",
+  "provider": {
+    "@type": "ProfessionalService",
+    "@id": "https://tuosito.github.io/#empowerlab",
+    "name": "Empower Lab Psy",
+    "url": "https://tuosito.github.io/index.html"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Bari"
+  },
+  "availableChannel": [
+    {
+      "@type": "ServiceChannel",
+      "name": "In presenza a Bari",
+      "serviceLocation": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Bari",
+          "addressCountry": "IT"
+        }
+      }
+    },
+    {
+      "@type": "ServiceChannel",
+      "name": "Online",
+      "serviceUrl": "https://tuosito.github.io/contatti.html"
+    }
+  ]
 }
 </script>
 
@@ -81,6 +136,10 @@
   <h3 class="servizio-minititolo">A chi si rivolge</h3>
   <p class="servizio-testo">
     Studenti universitari e non, e più in generale chiunque stia attraversando un periodo di studio impegnativo e voglia essere accompagnato nel migliorare metodo, organizzazione e risultati.
+  </p>
+  <!-- Paragrafo aggiunto da Claude (ottobre 2026): SEO locale, "supporto esami" e collegamenti interni. La pagina resta una bozza di Claude da riscrivere. -->
+  <p class="servizio-testo">
+    Il tutoraggio è pensato anche per chi deve preparare uno o più esami universitari e si svolge <strong>a Bari, in presenza, e online</strong>. Se l'ansia o il confronto con gli altri pesano sul tuo studio, puoi leggere gli approfondimenti su <a href="ansia-universita.html" class="link-articolo">ansia nello studio universitario</a> e su <a href="metodo-studio.html" class="link-articolo">metodo di studio</a>, oppure valutare un percorso di <a href="supporto-psicologico.html" class="link-articolo">supporto psicologico</a>.
   </p>
 
   <!-- MODULO DI CONTATTO aggiunto da Claude (28/08/2026) su richiesta di Angelo -->
