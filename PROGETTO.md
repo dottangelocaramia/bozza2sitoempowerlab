@@ -2,7 +2,7 @@
 
 *Questo file vive dentro il repository e va aggiornato quando cambia qualcosa di rilevante. Serve per ritrovare velocemente il filo del progetto anche dopo giorni o settimane di pausa.*
 
-*Ultimo aggiornamento: 8 ottobre 2026 (refusi corretti, SEO su servizi/profili/home, rifiniture grafiche richieste da Angelo — pushato su GitHub, main `fe50f63`)*
+*Ultimo aggiornamento: 8 ottobre 2026 (workbook 1-3 completati con i contenuti di Angelo; main `0573894`)*
 
 ## Dove siamo
 
@@ -10,7 +10,7 @@ Questo repository (**Bozza2 Sito Empower Lab**) è l'ambiente di lavoro del sito
 
 **Roadmap commerciale concordata (28/08/2026)**: fase iniziale = sito statico, ogni servizio richiede un contatto diretto prima dell'acquisto (fase attuale); fase intermedia = integrazione di un sistema di pagamento (probabilmente Stripe) sul sito esistente; fase finale = login utenti, area riservata, acquisto diretto senza intervento di Angelo. Si lavora ora solo sulla fase iniziale.
 
-Stato: Fase 1 e roadmap tecnica concluse; sviluppo progressivo del prototipo statico in corso. Fatti: SEO di tutto il sito (servizi, profili, home, articoli), refusi, feedback reali, privacy generica (stand-by). Da fare prima del dominio: rifinire i contenuti bozza (workbook1/2/3, corsi, tutoraggio, tutoraggio-dsa, training-autogeno, comunicazione, time-management, apprendimento, statistica, ai-machine-learning, work-life, orientamento-carriera). Dominio, migrazione, pagamenti e area riservata sono in attesa (decisione di Angelo).
+Stato: Fase 1 e roadmap tecnica concluse; sviluppo progressivo del prototipo statico in corso. Fatti: SEO di tutto il sito (servizi, profili, home, articoli), refusi, feedback reali, privacy generica (stand-by). Da fare prima del dominio: rifinire i contenuti bozza (altri workbook in arrivo da Angelo, corsi, tutoraggio, tutoraggio-dsa, training-autogeno, comunicazione, time-management, apprendimento, statistica, ai-machine-learning, work-life, orientamento-carriera). Dominio, migrazione, pagamenti e area riservata sono in attesa (decisione di Angelo).
 
 ## Come è fatto il sito (architettura)
 
@@ -57,6 +57,8 @@ Il menu principale (in `template/header.html`) collega: Home, Chi siamo, Empower
    - *Refusi corretti*: home ("missione di offrire", "ti accompagniamo", "tue capacità", "focus sul benessere"), feedback ("infinite", "perché", "preparare", "implementato", "emozioni", "su"), test ("risuona"), autostima2 ("concedersi"), FAQ ("percorsi", "transizioni"), chi-siamo ("sé", "Psicoterapeuta sistemica relazionale"), contatti ("verrà"), profilo Rosa ("relazionale"). Corretti anche in corsi.html.
    - *SEO (modifiche visibili = proposte di Claude, facilmente rimovibili)*: titoli/description "a Bari e online" su 9 pagine servizio (Service con `@id`, provider, `areaServed` Bari, `availableChannel` presenza/online); "supporto esami Bari" puntato su tutoraggio.html (title, description, paragrafo con link ad ansia-universita, metodo-studio, supporto-psicologico); 5 corsi (Course con provider/lingua); profili (Person con Albo 8380/8379, `memberOf` Ordine Psicologi Puglia [dedotto da "Albo Puglia", da confermare], `workLocation` Bari, `knowsAbout`; riga "Bari · colloqui in presenza e online"; frase finale in grigio corsivo); home (ProfessionalService con alternateName Empower Lab / Caramia / Caramia Amodio, contactPoint, catalogo servizi, WebSite; **un solo H1** — i quattro titoli di sezione sono h2 con classe `.titolo-sezione-home`, stesso aspetto; riga introduttiva in corsivo con link ai servizi); contatti (ContactPage + Breadcrumb); chi-siamo (AboutPage); servizi (ItemList); FAQ (risposta "in presenza (a Bari) che online" + Breadcrumb); og:site_name, og:image:alt e twitter:* su tutte le pagine; Breadcrumb su test, workbook, formazione-fomo; description accorciate a ≤160; sitemap con lastmod.
 8. **Rifiniture richieste da Angelo (08/10/2026, commit `fe50f63`)** — home: "Psicologo Bari" (title/description/riga introduttiva; non penalizza la SEO, Google ignora la preposizione "a"); riga introduttiva più piccola, corsivo, font serif e grigio-blu; profili: frase "Colloqui a Bari, in presenza, e online…" piccola, corsivo, grigia; supporto-psicologico: paragrafo su sede/esami spostato in fondo a "Cos'è?"; servizi.html: card Percorsi = work-life balance, motivazione, coaching; card Formazione = nomina il metodo di studio; "Empower Lab Psy AC" → "Empower Lab Psy – Amodio & Caramia".
+
+9. **Workbook 1-3 (08/10/2026, commit `0573894`)** — contenuti forniti da Angelo (titolo con "?", sottotitolo "Esperimento #0N", frase in corsivo, Cos'è, Il meccanismo, Cosa troverai, Per chi è, Info pratiche) organizzati con sezioni, parole chiave in grassetto e link interni (supporto-psicologico, autostima1/2, confronto-social). Categorie: "Autostima e Decisioni", "Autostima e Confronto Sociale", "Ansia e Ossessioni" (la terza prima era "Ansia / Pensieri Ossessivi"). Nuove classi CSS `.workbook-frase` e `.workbook-nota`. Card di workbook.html, title/description/keywords e breadcrumb allineati. Refusi sistemati: "non sono a capire"→"non solo a capire", "l' hai"→"l'hai", "pratico e concreto"→"pratiche e concrete" (workbook3). Chi-siamo: testo aggiornato da Angelo (merge `38f4342`). Test: contenuti confermati da Angelo così come sono.
 
 ## Decisioni prese
 
