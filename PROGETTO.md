@@ -2,7 +2,7 @@
 
 *Questo file vive dentro il repository e va aggiornato quando cambia qualcosa di rilevante. Serve per ritrovare velocemente il filo del progetto anche dopo giorni o settimane di pausa.*
 
-*Ultimo aggiornamento: 8 ottobre 2026 (workbook 1-3 completati con i contenuti di Angelo; main `0573894`)*
+*Ultimo aggiornamento: 12 ottobre 2026 (rifiniture di layout/accessibilità, ottimizzazione immagini, pulizia commenti; main `5b39290`)*
 
 ## Dove siamo
 
@@ -62,6 +62,8 @@ Il menu principale (in `template/header.html`) collega: Home, Chi siamo, Empower
 
 10. **Workbook: rifiniture (08/10/2026)** — file rinominati `workbook1/2/3.html` → `esp1-workbook.html`, `esp2-workbook.html`, `esp3-workbook.html` (link, canonical, og:url, breadcrumb e sitemap allineati; i vecchi URL non esistono più); frase ad effetto in box semitrasparente con doppia linea fine (`.workbook-frase`); "Cosa troverai all'interno" in 6 riquadri con icona e numero (`.workbook-card-grid`/`.workbook-card`); link dagli articoli sull'autostima ai workbook: autostima1 "approvazione esterna" → esp1, autostima1 "dialogo interno" → esp3, autostima2 "asticella" → esp2.
 
+11. **Layout, accessibilità, immagini, commenti (12/10/2026, commit `5b39290`)** — home: griglia dei 5 servizi principali passata da grid a flexbox centrato (niente più vuoto a destra sull'ultima riga incompleta); aggiunte due piccole foto cliccabili di Angelo e Rosa nella sezione "Chi siamo" (link ai rispettivi profili); aggiunto un pulsante "Prenota il tuo colloquio" anche subito dopo la descrizione iniziale. Contrasto del nome autore nella citazione portato a un rapporto 3:1 (cambiato solo il valore del grigio, `#A9A9A9` → `#878787`; l'altra citazione in grigio chiaro della home era già conforme e non è stata toccata). Pulsante WhatsApp flottante rimpicciolito ulteriormente su mobile e aggiunto margine in fondo alle pagine su schermi piccoli. Nuovo box `.servizio-box-utile` (bordo colorato nel tema della pagina) applicato alle sezioni "A cosa può essere utile" di training-autogeno.html e tutoraggio-dsa.html. Immagini: ricompressi 7 JPEG con risparmio reale (qualità 85, subsampling 4:2:0, metadati rimossi; range 12-25%); lasciati invariati i file dove non c'era beneficio reale (compreso logo.png, non migliorabile con gli strumenti disponibili, senza accesso root per installare strumenti di ottimizzazione lossless). Rimossi da tutte le pagine HTML i riferimenti a "Claude" (anche nei commenti) e tolta l'attribuzione di chi ha eseguito l'aggiornamento; dove già presente, la data resta indicata.
+
 ## Decisioni prese
 
 - Repository di lavoro: `bozza2sitoempowerlab` (senza spazi, privata). Backup esterno periodico sul Mac di Angelo.
@@ -84,6 +86,7 @@ Il menu principale (in `template/header.html`) collega: Home, Chi siamo, Empower
 - Il footer (template/footer.html) mostra la tagline abbreviata "Psicologia e Formazione" (senza "Crescita personale"): **confermato da Angelo (29/08/2026)** che va bene così, non va uniformata.
 - training-autogeno.html, tutoraggio.html e le 5 pagine corsi restano contenuti bozza scritti da Claude, da rileggere e rifinire da Angelo.
 - ~~Alcuni file (chi-siamo.html, contatti.html, index.html) avevano piccoli sbilanciamenti preesistenti tra tag di apertura/chiusura~~ **Risolto (29/08/2026)**: i 3 sbilanciamenti pre-esistenti sono stati corretti (rimossi due `</div>` orfani/duplicati in chi-siamo.html e index.html, aggiunta una `</a>` mancante nel titolo Instagram di contatti.html), senza alcuna variazione visiva.
+- **Da segnalare ad Angelo (12/10/2026)**: in supporto-psicologico.html, nel paragrafo sugli strumenti utilizzati, compare un "(Angelo)" dentro il testo visibile ("...utile per la gestione dello stress e dell'ansia ma non solo (Angelo)."). Sembra un appunto personale rimasto per errore nel testo pubblicato: da verificare e, se non voluto, da rimuovere.
 
 ## Contenuti ancora da scrivere (lavoro di Angelo)
 
