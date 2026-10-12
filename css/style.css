@@ -233,7 +233,7 @@ h2 {
     margin-top: 30px;
 }
 
-/* Titoli di sezione della home: sono <h2> (la pagina ha un solo <h1> per la SEO) ma mantengono l'aspetto che avevano da <h1>. Aggiunto da Claude, ottobre 2026 */
+/* Titoli di sezione della home: sono <h2> (la pagina ha un solo <h1> per la SEO) ma mantengono l'aspetto che avevano da <h1>. Aggiunto, ottobre 2026 */
 .titolo-sezione-home {
     font-size: 2em;
     font-weight: 700;
@@ -384,7 +384,7 @@ h2 {
 
 /* ===========================
    AZIONI PAGINE DETTAGLIO TEST/WORKBOOK
-   Aggiunto da Claude (2026-08-28)
+   Aggiunto (2026-08-28)
 =========================== */
 .dettaglio-azioni {
     display: flex;
@@ -424,7 +424,7 @@ h2 {
 
 /* ===========================
    CTA FORM CONTATTI (Google Form)
-   Aggiunto da Claude (2026-08-27)
+   Aggiunto (2026-08-27)
 =========================== */
 .contatti-form-cta {
     text-align: center;
@@ -874,15 +874,15 @@ color:#27ae60;
 }
 
 /* ===========================================================================
-   CARD SERVIZI PRINCIPALI (index.html) — corretto da Claude (29/08/2026) su
-   segnalazione di Angelo: prima condividevano la classe .servizi-grid con
+   CARD SERVIZI PRINCIPALI (index.html) — corretto (29/08/2026) su
+   segnalazione: prima condividevano la classe .servizi-grid con
    servizi.html/Formazione.html (che nel frattempo era diventata una grid con
    colonne minmax(230px,1fr)), causando card troppo vicine/sovrapposte in home.
    Ora hanno una griglia dedicata. Icone aggiunte, colore blu #2596be fisso su
-   tutte (eccezione voluta da Angelo alla regola "un colore per argomento":
+   tutte (eccezione alla regola "un colore per argomento":
    qui sono le card principali della home).
 =========================================================================== */
-/* Corretto ulteriormente da Claude (29/08/2026) su richiesta di Angelo: le card
+/* Corretto ulteriormente (29/08/2026): le card
    toccavano i margini della pagina (la sezione non aveva un contenitore con
    larghezza massima, a differenza del resto del sito) — ora e' centrata con la
    stessa larghezza massima di .container (900px) e margini laterali coerenti.
@@ -985,7 +985,7 @@ color:#27ae60;
 /* Per citazioni brevi ad effetto */
 .box-invisibile-citazioni {
   width: 90%;              /* su mobile occupa il 90% evitando di toccare i bordi */
-  max-width: 800px;        /* allargato da Claude (29/08/2026) su richiesta di Angelo: evita che frasi lunghe si spezzino in modo scomodo (es. una sola parola a capo) */
+  max-width: 800px;        /* allargato (29/08/2026): evita che frasi lunghe si spezzino in modo scomodo (es. una sola parola a capo) */
   margin-left: auto;       /* centratura orizzontale */
   margin-right: auto;      /* centratura orizzontale */
   margin-top: 2rem;        /* più spazio sopra per dare respiro alla citazione */
@@ -1290,7 +1290,7 @@ color:#27ae60;
 
 /* IMMAGINE con trasparenza elegante */
 .articolo-immagine {
-    /* Corretto da Claude (02/10/2026) su richiesta di Angelo: su desktop il ritaglio
+    /* Corretto (02/10/2026): su desktop il ritaglio
        fisso (830px di larghezza circa per 280px di altezza, rapporto ~3:1) tagliava
        troppo le immagini reali (rapporto tipico 1.3:1 - 1.8:1), perdendone parte.
        Ora il riquadro e' un po' piu' alto e leggermente piu' stretto (max-width,
@@ -1497,8 +1497,8 @@ color:#27ae60;
 }
 
 /* ===========================================================================
-   NUOVO BOX CITAZIONE (variante chiara/elegante) — aggiunto da Claude
-   (29/08/2026) su richiesta di Angelo: da testare prima sul profilo di
+   NUOVO BOX CITAZIONE (variante chiara/elegante) — aggiunto
+   (29/08/2026): da testare prima sul profilo di
    Angelo (angelo-caramia.html), non sostituisce .articolo-citazione-finale
    che resta invariata e condivisa dalle altre pagine.
 =========================================================================== */
@@ -2026,14 +2026,13 @@ footer a:hover {
 }
 
 /* ===========================================================================
-   STILE DEDICATO A empowerlab.html — aggiunto da Claude (28/08/2026) su
-   richiesta di Angelo: pagina volutamente più personalizzata rispetto allo
+   STILE DEDICATO A empowerlab.html — aggiunto (28/08/2026): pagina volutamente più personalizzata rispetto allo
    stile standard delle pagine servizio, mantenendo la stessa palette colori
-   del sito (arancione #f39c12, blu scuro #2c3e50). Da valutare da Angelo.
+   del sito (arancione #f39c12, blu scuro #2c3e50). Da valutare.
    =========================================================================== */
 
 .eplab-hero {
-  /* Ridisegnato da Claude (29/08/2026) su richiesta di Angelo: il box era
+  /* Ridisegnato (29/08/2026): il box era
      percepito come troppo rigido/piatto (rettangolo scuro pieno con un
      bordo netto in fondo). Ora ha profondità (gradiente + bagliore arancio
      in un angolo) e un piccolo accento sfumato centrale al posto del bordo
@@ -2227,7 +2226,7 @@ footer a:hover {
 
 /* ==============================
    FOTO PROFILO (pagine team — Angelo, Rosa, futuri collaboratori)
-   Aggiunto da Claude — blocco riutilizzabile: per aggiungere una foto su
+   Aggiunto — blocco riutilizzabile: per aggiungere una foto su
    un'altra pagina, basta ripetere lo stesso HTML (vedi angelo-caramia.html
    o amodio.html) cambiando solo l'immagine in src.
 ============================== */
@@ -2276,7 +2275,7 @@ footer a:hover {
 
 /* ===========================
    LINK TRA ARTICOLI (ipertesto interno)
-   aggiunto da Claude (2026-08-27)
+   aggiunto (2026-08-27)
 =========================== */
 .link-articolo {
     color: #f39c12;
@@ -2293,7 +2292,7 @@ footer a:hover {
 
 /* ===========================
    ARGOMENTI ARTICOLI — tendina colorata per categoria
-   aggiunto da Claude (2026-08-27) per articoli.html
+   aggiunto (2026-08-27) per articoli.html
 =========================== */
 .argomenti-lista {
     display: grid;
@@ -2303,7 +2302,7 @@ footer a:hover {
     margin: 30px 0;
 }
 
-/* Restyle da Claude (29/08/2026) su richiesta di Angelo: da blocchi impilati a card,
+/* Restyle (29/08/2026): da blocchi impilati a card,
    stesso linguaggio visivo di servizi.html (icona, bordo superiore colorato, hover),
    mantenendo colori e testo gia' presenti e lo stesso comportamento a tendina. */
 .argomento-blocco {
@@ -2408,7 +2407,7 @@ footer a:hover {
     margin-bottom: 0;
 }
 
-/* Nascosto da Claude (29/08/2026) su richiesta di Angelo: l'elenco aperto
+/* Nascosto (29/08/2026): l'elenco aperto
    mostrava anche il sottotitolo, rendendolo troppo lungo. Il markup resta nel
    file (non e' stato tolto testo), solo non viene piu' mostrato. */
 .argomento-link-desc {
@@ -2438,7 +2437,7 @@ footer a:hover {
 
 /* ===========================================================================
    ANIMAZIONI SCROLL-REVEAL (generiche, riutilizzabili)
-   aggiunte da Claude (29/08/2026) su richiesta di Angelo — vedi js/scroll-reveal.js
+   aggiunte (29/08/2026) — vedi js/scroll-reveal.js
 =========================================================================== */
 .reveal-up {
     opacity: 0;
@@ -2474,7 +2473,7 @@ footer a:hover {
 
 /* ===========================================================================
    FOTO PROFILO — comparsa da destra (solo dove si aggiunge questa classe)
-   aggiunto da Claude (29/08/2026) su richiesta di Angelo per angelo-caramia.html
+   aggiunto (29/08/2026) per angelo-caramia.html
 =========================================================================== */
 .foto-profilo-animata {
     opacity: 0;
@@ -2483,7 +2482,7 @@ footer a:hover {
 
 /* ===========================================================================
    BOX "IN BREVE" — sezione riassuntiva evidenziata (angelo-caramia.html)
-   aggiunto da Claude (29/08/2026) su richiesta di Angelo
+   aggiunto (29/08/2026)
 =========================================================================== */
 .in-breve-box {
     background: #fdf3e7;
@@ -2509,7 +2508,7 @@ footer a:hover {
 
 /* ===========================================================================
    AMBITI DI LAVORO — griglia di card (angelo-caramia.html)
-   aggiunto da Claude (29/08/2026) su richiesta di Angelo
+   aggiunto (29/08/2026)
 =========================================================================== */
 .ambiti-lavoro-grid {
     display: grid;
@@ -2549,7 +2548,7 @@ footer a:hover {
 
 /* ===========================================================================
    CARD SERVIZI HOME — ora l'intera card e' cliccabile (index.html)
-   aggiunto/modificato da Claude (29/08/2026) su richiesta di Angelo
+   aggiunto/modificato (29/08/2026)
 =========================================================================== */
 a.servizio-card {
     text-decoration: none;
@@ -2559,7 +2558,7 @@ a.servizio-card {
 
 /* ===========================================================================
    CITAZIONE IN EVIDENZA HOME (.box-invisibile-citazioni)
-   resa piu' prominente da Claude (29/08/2026) su richiesta di Angelo
+   resa piu' prominente (29/08/2026)
 =========================================================================== */
 .box-invisibile-citazioni {
     border-left: 4px solid #f39c12;
@@ -2581,7 +2580,7 @@ a.servizio-card {
 
 /* ===========================================================================
    PAGINA CONTATTI — card per ogni canale di contatto (contatti.html)
-   aggiunto da Claude (29/08/2026) su richiesta di Angelo: solo restyling
+   aggiunto (29/08/2026): solo restyling
    estetico, nessun bottone/link e' stato spostato o rimosso.
 =========================================================================== */
 .contatti-canali-wrapper {
@@ -2611,7 +2610,7 @@ a.servizio-card {
 
 /* ==============================
    PULSANTE FLOTTANTE WHATSAPP
-   Aggiunto da Claude (29/08/2026) su richiesta di Angelo.
+   Aggiunto (29/08/2026).
    Iniettato tramite template/footer.html: visibile su tutte le pagine presenti e future.
    ============================== */
 .whatsapp-float {
@@ -2654,7 +2653,7 @@ a.servizio-card {
 
 /* ===========================
    PULSANTE WHATSAPP nella CTA form contatti (supporto-psicologico.html)
-   Aggiunto da Claude (29/08/2026) su richiesta di Angelo
+   Aggiunto (29/08/2026)
 =========================== */
 .whatsapp-cta-button {
     background: #25d366;
@@ -2674,7 +2673,7 @@ a.servizio-card {
 }
 
 /* ===========================
-   FOUNDERS A COLONNA (chi-siamo.html) — aggiunto da Claude (29/08/2026) su richiesta di Angelo:
+   FOUNDERS A COLONNA (chi-siamo.html) — aggiunto (29/08/2026):
    le due descrizioni dei founder affiancate su desktop (Angelo a sinistra, Rosa a destra),
    con una piccola foto accanto al nome di ciascuno. Impilate una sopra l'altra su mobile.
 =========================== */
@@ -2686,7 +2685,7 @@ a.servizio-card {
 }
 
 .founder-card {
-    /* Ridisegnato da Claude (29/08/2026) su richiesta di Angelo: prima le due colonne
+    /* Ridisegnato (29/08/2026): prima le due colonne
        non avevano uno sfondo/bordo proprio (ereditavano solo un piccolo divisorio da
        .profilo-preview, pensato per profili impilati) e sembravano un blocco unico
        affiancato invece di due colonne ben separate. Ora ciascuna e' una card a se'. */
@@ -2730,11 +2729,25 @@ a.servizio-card {
     margin: 0;
 }
 
+/* Intestazione "Chi siamo": titolo e foto dei due professionisti sulla stessa riga
+   (prima le foto erano in una riga separata sotto il titolo). Su schermi stretti
+   va a capo e si centra comunque, grazie a flex-wrap. */
+.chi-siamo-home-intestazione {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+}
+.chi-siamo-home-intestazione .titolo-sezione-home {
+    margin: 0;
+}
+
 .home-founders-avatars {
     display: flex;
     justify-content: center;
     gap: 36px;
-    margin: 24px 0 10px 0;
+    margin: 6px 0;
 }
 .home-founder-avatar-link {
     display: flex;
@@ -2770,7 +2783,7 @@ a.servizio-card {
 }
 
 /* ===========================================================================
-   CARD SERVIZI GRANDI (servizi.html) — aggiunto da Claude (29/08/2026) su richiesta di Angelo
+   CARD SERVIZI GRANDI (servizi.html) — aggiunto (29/08/2026)
    Riusa .servizio-card (gia' usata cliccabile in index.html) aggiungendo icona e colore
    per servizio, con gli stessi colori gia' usati nella pagina articoli.html.
 =========================================================================== */
@@ -2820,8 +2833,7 @@ a.servizio-card {
 }
 
 /* ===========================================================================
-   SEZIONE INSTAGRAM (contatti.html) — destilizzata da Claude (29/08/2026)
-   su richiesta di Angelo: non più in un box bianco separato, integrata nel
+   SEZIONE INSTAGRAM (contatti.html) — destilizzata (29/08/2026): non più in un box bianco separato, integrata nel
    flusso della pagina. Non tocca .instagram-icon-grande/.instagram-button-lg
    condivise con altre pagine (es. empowerlab.html).
 =========================================================================== */
@@ -2854,7 +2866,7 @@ a.servizio-card {
 
 /* ===========================
    WORKBOOK (pagine workbook1-3)
-   Aggiunto da Claude, ottobre 2026
+   Aggiunto, ottobre 2026
 =========================== */
 .workbook-frase {
     text-align: center;

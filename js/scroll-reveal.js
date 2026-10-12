@@ -1,4 +1,4 @@
-// scroll-reveal.js — aggiunto da Claude (29/08/2026) su richiesta di Angelo.
+// scroll-reveal.js — aggiunto (29/08/2026).
 // Applica un effetto di comparsa (dal basso o dall'alto) agli elementi con
 // classe "reveal-up" o "reveal-down" quando entrano nell'area visibile durante lo scroll.
 // Riutilizzabile su qualunque pagina: basta includere questo script e dare
