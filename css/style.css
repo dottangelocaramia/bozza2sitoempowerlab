@@ -2767,12 +2767,9 @@ a.servizio-card {
     margin: 0;
 }
 
-.home-founders-avatars {
-    display: flex;
-    justify-content: center;
-    gap: 36px;
-    margin: 6px 0;
-}
+/* .home-founders-avatars rimossa (12/10/2026): Angelo e Rosa ora sono due
+   elementi diretti di .chi-siamo-home-intestazione (uno a sinistra, uno a
+   destra del titolo), non piu' raggruppati in un div a parte. */
 .home-founder-avatar-link {
     display: flex;
     flex-direction: column;
