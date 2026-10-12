@@ -179,7 +179,7 @@ Questa informativa può essere aggiornata: la data dell'ultima revisione è ripo
 <div id="footer"></div>
 <script>
 fetch("template/footer.html")
-.then(response => response.text)
+.then(response => response.text())
 .then(data => {
 document.getElementById("footer").innerHTML = data;
 });
