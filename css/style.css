@@ -2317,6 +2317,15 @@ footer a:hover {
     margin: 30px 0;
 }
 
+/* Quando una scheda e' aperta (12/10/2026): l'elenco passa a una sola colonna
+   a tutta larghezza, cosi' la scheda aperta ha tutto lo spazio per il suo
+   contenuto e le altre (chiuse) si impilano sopra/sotto senza lasciare vuoti.
+   Richiudendo tutte le schede torna alla griglia a piu' colonne. Gestito dallo
+   script inline in articoli.html (apertura/chiusura delle schede). */
+.argomenti-lista.ha-aperto {
+    grid-template-columns: 1fr;
+}
+
 /* Restyle (29/08/2026): da blocchi impilati a card,
    stesso linguaggio visivo di servizi.html (icona, bordo superiore colorato, hover),
    mantenendo colori e testo gia' presenti e lo stesso comportamento a tendina. */

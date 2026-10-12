@@ -221,13 +221,29 @@ In questa sezione condividiamo riflessioni, strumenti pratici e approfondimenti 
 
 </div>
 
+<!-- Click su una scheda (12/10/2026): chiude le altre schede eventualmente
+     aperte e, quando una scheda e' aperta, passa l'elenco a una sola colonna
+     a tutta larghezza (vedi .argomenti-lista.ha-aperto in css/style.css). -->
 <script>
 document.querySelectorAll('.argomento-header').forEach(function(header) {
   header.addEventListener('click', function() {
     var blocco = header.parentElement;
     var corpo = header.nextElementSibling;
-    var aperto = blocco.classList.toggle('aperto');
+    var lista = blocco.parentElement;
+    var giaAperto = blocco.classList.contains('aperto');
+
+    lista.querySelectorAll('.argomento-blocco.aperto').forEach(function(altro) {
+      if (altro !== blocco) {
+        altro.classList.remove('aperto');
+        altro.querySelector('.argomento-corpo').style.display = 'none';
+      }
+    });
+
+    var aperto = !giaAperto;
+    blocco.classList.toggle('aperto', aperto);
     corpo.style.display = aperto ? 'block' : 'none';
+
+    lista.classList.toggle('ha-aperto', lista.querySelector('.argomento-blocco.aperto') !== null);
   });
 });
 </script>
