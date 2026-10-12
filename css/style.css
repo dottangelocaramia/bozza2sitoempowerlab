@@ -967,19 +967,34 @@ color:#27ae60;
 
 
 
-/* Per paragrafi e testi lunghi */
+/* Per paragrafi e testi lunghi — testo introduttivo della home (index.html),
+   unico punto in cui questa classe e' usata. Allargato da 700px a 900px e
+   incorniciato in una card elegante (12/10/2026): a 700px il testo risultava
+   troppo stretto e, da solo su sfondo bianco, sembrava poco rifinito. */
 .box-invisibile-testo {
   width: 90%;              /* su mobile occupa il 90% evitando di toccare i bordi */
-  max-width: 700px;        /* larghezza ottimale di lettura: senza questo limite le
-                               righe arrivavano a riempire tutto lo schermo sui monitor
-                               larghi, rendendo il testo piu' faticoso da leggere */
+  max-width: 900px;        /* larghezza ottimale di lettura */
   margin-left: auto;       /* centratura orizzontale */
   margin-right: auto;      /* centratura orizzontale */
-  margin-top: 1rem;        /* più spazio sopra per dare respiro alla citazione */
-  margin-bottom: 1rem;     /* più spazio sotto per dare respiro alla citazione */
-  padding-left: 1.2rem;    /* respiro laterale sinistro */
-  padding-right: 1.2rem;   /* respiro laterale destro */
+  margin-top: 2.2rem;      /* più spazio sopra per dare respiro alla card */
+  margin-bottom: 2.2rem;   /* più spazio sotto per dare respiro alla card */
+  padding: 2.4rem 2.6rem;  /* respiro interno generoso su tutti i lati */
   box-sizing: border-box;  /* padding incluso nella larghezza totale */
+  background: linear-gradient(180deg, #fffaf4 0%, #ffffff 100%); /* tocco caldo, coerente con l'arancione del brand */
+  border-top: 4px solid #2596be; /* stesso blu delle card principali della home */
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(44, 62, 80, 0.09);
+  text-align: center;
+}
+.box-invisibile-testo p {
+  margin: 0;
+  line-height: 1.8;
+  color: #3a3a3a;
+}
+@media (max-width: 600px) {
+  .box-invisibile-testo {
+    padding: 1.6rem 1.4rem;
+  }
 }
 
 /* Per citazioni brevi ad effetto */
@@ -2416,7 +2431,7 @@ footer a:hover {
 
 .argomento-link-autore {
     display: block;
-    color: #999;
+    color: #777; /* leggermente piu' scuro (12/10/2026): #999 risultava poco leggibile */
     font-size: 0.82em;
     font-style: italic;
     margin-top: 6px;
