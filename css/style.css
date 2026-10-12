@@ -968,32 +968,61 @@ color:#27ae60;
 
 
 /* Per paragrafi e testi lunghi — testo introduttivo della home (index.html),
-   unico punto in cui questa classe e' usata. Allargato da 700px a 900px e
-   incorniciato in una card elegante (12/10/2026): a 700px il testo risultava
-   troppo stretto e, da solo su sfondo bianco, sembrava poco rifinito. */
+   unico punto in cui questa classe e' usata. Stile editoriale con capolettera
+   (12/10/2026, seconda versione: la card con bordo/ombra sembrava spoglia e
+   troppo simile alle altre sezioni del sito). Nessun box: tipografia in
+   serif come una pagina di libro, capolettera decorato, due righe sottili
+   sfumate sopra e sotto (stesso arancione di .linea-editoriale). */
 .box-invisibile-testo {
   width: 90%;              /* su mobile occupa il 90% evitando di toccare i bordi */
   max-width: 900px;        /* larghezza ottimale di lettura */
   margin-left: auto;       /* centratura orizzontale */
   margin-right: auto;      /* centratura orizzontale */
-  margin-top: 2.2rem;      /* più spazio sopra per dare respiro alla card */
-  margin-bottom: 2.2rem;   /* più spazio sotto per dare respiro alla card */
-  padding: 2.4rem 2.6rem;  /* respiro interno generoso su tutti i lati */
-  box-sizing: border-box;  /* padding incluso nella larghezza totale */
-  background: linear-gradient(180deg, #fffaf4 0%, #ffffff 100%); /* tocco caldo, coerente con l'arancione del brand */
-  border-top: 4px solid #2596be; /* stesso blu delle card principali della home */
-  border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(44, 62, 80, 0.09);
-  text-align: center;
+  margin-top: 2.6rem;
+  margin-bottom: 2.6rem;
+  padding: 0 1.2rem;
+  box-sizing: border-box;
+}
+.box-invisibile-testo::before,
+.box-invisibile-testo::after {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 2px;
+  margin: 0 auto;
+  background: linear-gradient(to right, transparent, #ff8326, transparent);
+  opacity: 0.8;
+  border-radius: 2px;
+}
+.box-invisibile-testo::before {
+  margin-bottom: 1.8rem;
+}
+.box-invisibile-testo::after {
+  margin-top: 1.8rem;
 }
 .box-invisibile-testo p {
   margin: 0;
-  line-height: 1.8;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.05em;
+  line-height: 1.85;
   color: #3a3a3a;
+  text-align: left;
+}
+.box-invisibile-testo p::first-letter {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 3.6em;
+  font-weight: 700;
+  float: left;
+  line-height: 0.82;
+  padding-right: 0.09em;
+  color: #2596be;
 }
 @media (max-width: 600px) {
   .box-invisibile-testo {
-    padding: 1.6rem 1.4rem;
+    padding: 0 0.6rem;
+  }
+  .box-invisibile-testo p::first-letter {
+    font-size: 2.8em;
   }
 }
 
