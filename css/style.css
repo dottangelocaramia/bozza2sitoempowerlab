@@ -889,8 +889,13 @@ color:#27ae60;
    Con questa larghezza e minmax(240px,1fr) le card si dispongono al massimo in
    3 per riga, andando a capo sulle righe successive e su mobile. */
 .servizi-principali-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    /* Flexbox invece di grid: con 5 card su 3 colonne la griglia lasciava la
+       seconda riga (2 card) allineata a sinistra, con un vuoto a destra.
+       Con flex-wrap + justify-content:center l'ultima riga incompleta resta
+       centrata, qualunque sia il numero di card. */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 30px;
     margin-top: 40px;
     max-width: 900px;
@@ -905,6 +910,8 @@ color:#27ae60;
     width: auto;           /* la base .servizio-card ha width:280px fisso: qui serve
                               auto, altrimenti la card puo' straboccare dalla sua
                               cella di grid e ricreare l'effetto di sovrapposizione */
+    flex: 1 1 240px;       /* stessa larghezza minima che aveva con grid (minmax 240px) */
+    max-width: 280px;
     padding: 34px 24px;
 }
 
@@ -2612,11 +2619,18 @@ a.servizio-card {
 
 @media (max-width: 600px) {
   .whatsapp-float {
-    width: 52px;
-    height: 52px;
-    bottom: 16px;
-    right: 16px;
-    font-size: 1.7rem;
+    /* Ridotto ulteriormente (era 52px) e il body sotto ha un margine extra,
+       cosi' il pulsante non copre mai l'ultima riga di testo o i pulsanti
+       di fondo pagina su schermi piccoli. */
+    width: 44px;
+    height: 44px;
+    bottom: 14px;
+    right: 14px;
+    font-size: 1.4rem;
+  }
+
+  body {
+    padding-bottom: 60px;
   }
 }
 
@@ -2696,6 +2710,46 @@ a.servizio-card {
     color: #888;
     letter-spacing: 0.5px;
     margin: 0;
+}
+
+/* Due piccole foto cliccabili di Angelo e Rosa nella sezione "Chi siamo" della home,
+   in stile simile a .founder-card-avatar ma più piccole. Ogni foto porta al profilo
+   della persona. Aggiunto ottobre 2026. */
+.home-founders-avatars {
+    display: flex;
+    justify-content: center;
+    gap: 36px;
+    margin: 24px 0 10px 0;
+}
+
+.home-founder-avatar-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+}
+
+.home-founder-avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #f39c12;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.home-founder-avatar-link span {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.8em;
+    color: #555;
+    letter-spacing: 0.3px;
+}
+
+.home-founder-avatar-link:hover .home-founder-avatar {
+    transform: scale(1.08);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.18);
 }
 
 @media (max-width: 700px) {
@@ -2791,6 +2845,21 @@ a.servizio-card {
    WORKBOOK (pagine workbook1-3)
    Aggiunto da Claude, ottobre 2026
 =========================== */
+.servizio-box-utile {
+    --tema-colore: #2596be; /* sovrascritto inline per pagina */
+    background: color-mix(in srgb, var(--tema-colore) 7%, white);
+    border-left: 4px solid var(--tema-colore);
+    border-radius: 0 10px 10px 0;
+    padding: 20px 26px;
+    margin: 18px 0 24px 0;
+}
+.servizio-box-utile p.servizio-testo {
+    margin: 0 0 10px 0;
+}
+.servizio-box-utile p.servizio-testo:last-child {
+    margin-bottom: 0;
+}
+
 .workbook-frase {
     text-align: center;
     font-family: Georgia, 'Times New Roman', serif;

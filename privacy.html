@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- META SEO aggiunti da Claude (Fase 1, approvati da Angelo) - descrizione da rivedere, URL placeholder da aggiornare quando sarà scelto il dominio definitivo -->
+<!-- META SEO aggiunti (Fase 1, approvati) - descrizione da rivedere, URL placeholder da aggiornare quando sarà scelto il dominio definitivo -->
 <meta name="description" content="Informativa generica sul trattamento dei dati personali di Empower Lab Psy (Angelo Caramia e Rosa Amodio, psicologi, Bari), ai sensi del GDPR.">
 <meta name="keywords" content="privacy, trattamento dati, GDPR, informativa privacy, Empower Lab Psy">
 <meta name="author" content="Angelo Caramia & Rosa Amodio">
@@ -29,7 +29,7 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 
-<!-- CONTENUTO DI QUESTA PAGINA: informativa GENERICA redatta da Claude il 06/10/2026 su indicazione di Angelo, a partire dal testo di Angelo e da fonti standard (art. 13 GDPR; art. 2-quinquies Codice privacy; Codice Deontologico degli Psicologi Italiani 2023, artt. 4, 11, 17, 31). Non costituisce consulenza legale: prima della pubblicazione definitiva va riletta da un legale o consulente privacy (dati sanitari, art. 9 GDPR) e RICONTROLLATA PER INTERO dopo la migrazione (hosting, trasferimenti extra-UE, servizi esterni, data di pubblicazione). -->
+<!-- CONTENUTO DI QUESTA PAGINA: informativa GENERICA redatta il 06/10/2026, a partire dal testo di Angelo e da fonti standard (art. 13 GDPR; art. 2-quinquies Codice privacy; Codice Deontologico degli Psicologi Italiani 2023, artt. 4, 11, 17, 31). Non costituisce consulenza legale: prima della pubblicazione definitiva va riletta da un legale o consulente privacy (dati sanitari, art. 9 GDPR) e RICONTROLLATA PER INTERO dopo la migrazione (hosting, trasferimenti extra-UE, servizi esterni, data di pubblicazione). -->
 
 <body>
 <div id="header"></div>
@@ -179,7 +179,7 @@ Questa informativa può essere aggiornata: la data dell'ultima revisione è ripo
 <div id="footer"></div>
 <script>
 fetch("template/footer.html")
-.then(response => response.text())
+.then(response => response.text)
 .then(data => {
 document.getElementById("footer").innerHTML = data;
 });
