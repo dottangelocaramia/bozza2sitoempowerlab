@@ -912,6 +912,8 @@ color:#27ae60;
     width: auto;           /* la base .servizio-card ha width:280px fisso: qui serve
                               auto, altrimenti la card puo' straboccare dalla sua
                               cella e ricreare l'effetto di sovrapposizione */
+    box-sizing: border-box; /* senza, il padding si sommava alla larghezza e le
+                                3 card non entravano piu' in una sola riga */
     flex: 1 1 240px;       /* stessa larghezza minima che aveva con grid (minmax 240px) */
     min-width: 0;          /* permette alla card di restringersi sotto il contenuto */
     max-width: 280px;
