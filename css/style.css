@@ -1040,6 +1040,20 @@ color:#27ae60;
   text-align: center;      /* testo centrato — ideale per frasi brevi */
 }
 
+/* Dagli schermi medio-grandi in su, la citazione resta sempre su una riga
+   sola (misurata: ~718px di testo a 20px Raleway). Il box si restringe
+   alla larghezza del testo invece di restare fisso a 800px. Sotto i 900px
+   (tablet/mobile) resta il comportamento precedente, a capo normale. */
+@media (min-width: 900px) {
+  .box-invisibile-citazioni {
+    width: fit-content;
+    max-width: 100%;
+  }
+  .box-invisibile-citazioni p {
+    white-space: nowrap;
+  }
+}
+
 
 
 
@@ -2794,6 +2808,17 @@ a.servizio-card {
 }
 .chi-siamo-home-intestazione .titolo-sezione-home {
     margin: 0;
+}
+
+/* Mobile: il titolo "Chi siamo" va sempre sulla sua riga, sopra le due
+   foto (prima capitava che le due foto finissero su righe separate,
+   una delle due "sola" e disallineata dall'altra). */
+@media (max-width: 768px) {
+    .chi-siamo-home-intestazione .titolo-sezione-home {
+        order: -1;
+        flex-basis: 100%;
+        text-align: center;
+    }
 }
 
 /* .home-founders-avatars rimossa (12/10/2026): Angelo e Rosa ora sono due
