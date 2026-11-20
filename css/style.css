@@ -1402,14 +1402,14 @@ color:#27ae60;
 
 
 
-/* separatore decorativo piccolo e centrato — versione arancione */
+/* separatore decorativo piccolo e centrato — versione arancione, sfumata (stessa tecnica di .box-invisibile-testo) */
 .separatore-titolo-piccolo-centrale {
-  width: 45px;                  /* larghezza linea — aumenta per allungarla */
-  height: 2px;                  /* spessore: ridotto da 3px per più eleganza */
-  background: #f39c12;          /* colore arancione — sostituisci con #2c3e50 per versione blu scuro */
-  margin: 5px auto 14px auto;  /* spazio sopra ridotto (da10px), sotto moderato (da 18px), auto per centrare */
-  border-radius: 2px;           /* angoli arrotondati */
-  opacity: 0.75;                /* leggermente trasparente — abbassa verso 0.5 per più delicato */
+  width: 90px;                  /* allungata rispetto alla versione precedente (45px) */
+  height: 2px;
+  background: linear-gradient(to right, transparent, #f39c12, transparent); /* sfumata ai lati invece di barra piena */
+  margin: 5px auto 14px auto;
+  border-radius: 2px;
+  opacity: 0.8;
 }
 
 /* variante blu scuro */
