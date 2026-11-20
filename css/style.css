@@ -42,6 +42,9 @@ header {
 
 .logo-header img {
     height: 45px;                            /* altezza logo nell'header — modifica per ridimensionarlo */
+    width: 45px;                             /* stessa larghezza dell'altezza: serve per il ritaglio tondo qui sotto */
+    border-radius: 50%;                      /* ritaglia sempre il logo in un cerchio, qualunque sia l'immagine caricata */
+    object-fit: cover;                       /* evita che l'immagine si deformi dentro il cerchio */
 }
 
 .logo-header h2 {
@@ -781,6 +784,7 @@ p {
 
     .logo-header img {
         height: 35px;
+        width: 35px;
     }
 }
 
