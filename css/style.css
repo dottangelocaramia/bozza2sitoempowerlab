@@ -524,8 +524,10 @@ h2 {
    LOGO (nella hero)
 =========================== */
 .logo img {
-    width: 200px;                            /* dimensione logo nella hero — modifica per ridimensionarlo */
-    height: auto;
+    width: 230px;                            /* dimensione logo nella hero — leggermente aumentata rispetto a 200px */
+    height: 230px;
+    border-radius: 50%;                      /* resa tonda anche se il file sorgente è quadrato */
+    object-fit: cover;
 }
 
 /* ===========================
