@@ -2096,29 +2096,15 @@ footer a:hover {
    =========================================================================== */
 
 .eplab-hero {
-  /* Ridisegnato (29/08/2026): il box era
-     percepito come troppo rigido/piatto (rettangolo scuro pieno con un
-     bordo netto in fondo). Ora ha profondità (gradiente + bagliore arancio
-     in un angolo) e un piccolo accento sfumato centrale al posto del bordo
-     netto, mantenendo la stessa palette (blu scuro #2c3e50, arancione #f39c12). */
-  position: relative;
-  overflow: hidden;
-  padding: 60px 40px 50px 40px;        /* più respiro verticale della .hero standard */
-  border-radius: 16px;
-  border-bottom: none;
-  background:
-    radial-gradient(circle at 85% 12%, rgba(243,156,18,0.22), transparent 55%),
-    linear-gradient(135deg, #1f2d38 0%, #2c3e50 55%, #34495e 100%);
-}
-
-.eplab-hero::after {
-  content: "";
-  display: block;
-  width: 70px;
-  height: 4px;
-  margin: 22px auto 0 auto;
-  border-radius: 4px;
-  background: linear-gradient(90deg, #f39c12, #2596be);
+  /* Ridisegnato (20/11/2026): il riquadro scuro pieno era percepito come
+     tozzo e poco coerente con lo stile del resto del sito, dove i titoli di
+     pagina sono testo semplice + linea arancione sotto (vedi .servizio-titolo
+     e .servizio-linea), senza sfondi colorati. Rimosso lo sfondo scuro,
+     allineato alla stessa linea arancione usata ovunque nel sito; resta solo
+     l'accento tipografico (corsivo/bold) a distinguere il nome del progetto. */
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px 20px 0 20px;
 }
 
 .eplab-hero h1 {
@@ -2128,12 +2114,24 @@ footer a:hover {
   font-size: 2.4rem;
   letter-spacing: 1px;
   margin-bottom: 0.6rem;
+  color: #2c3e50;
 }
 
-.eplab-tagline {
+.eplab-hero .eplab-tagline {
   font-size: 1.1rem;
   font-weight: 300;
-  opacity: 0.92;
+  color: #5a6b7a;
+}
+
+.eplab-hero::after {
+  content: "";
+  display: block;
+  width: 80%;
+  max-width: 720px;
+  height: 3px;
+  background: #f39c12;
+  margin: 20px auto 0 auto;
+  border-radius: 2px;
 }
 
 .eplab-lead {
