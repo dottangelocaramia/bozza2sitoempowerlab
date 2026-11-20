@@ -2149,7 +2149,7 @@ footer a:hover {
   max-width: 720px;
   padding: 1rem 1.6rem;
   border-left: 4px solid #f39c12;
-  background: #fdf3e7;
+  background: #fff8f4;                     /* allineato a .articolo-citazione per coerenza nel sito */
   font-family: 'Raleway', sans-serif;
   font-style: italic;
   font-size: 1.2rem;
@@ -2158,7 +2158,7 @@ footer a:hover {
 }
 
 .eplab-section-tinted {
-  background: #fdf3e7;
+  background: #ffede1;                     /* stesso tono pesca dello sfondo pagina: crea un'isola visibile dentro il .container bianco */
   border-radius: 12px;
   padding: 2rem 1.8rem;
   margin: 2.4rem 0;
