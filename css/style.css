@@ -2164,7 +2164,8 @@ footer a:hover {
   max-width: 720px;
   padding: 1rem 1.6rem;
   border-left: 4px solid #f39c12;
-  background: #fff8f4;                     /* allineato a .articolo-citazione per coerenza nel sito */
+  background: #ffffff;                     /* bianco pieno (era #fff8f4): fa contrasto sullo sfondo pesca, un solo box invece di un box dentro un altro */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);  /* leggera ombra per staccarla dallo sfondo, come le altre card bianche del sito */
   font-family: 'Raleway', sans-serif;
   font-style: italic;
   font-size: 1.2rem;
