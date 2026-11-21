@@ -1172,6 +1172,8 @@ color:#27ae60;
     margin-bottom: 40px; /* spazio sotto prima delle sezioni */
 
     line-height: 1.7;  /* altezza riga per leggibilità */
+
+    text-wrap: balance; /* evita parole orfane isolate sull'ultima riga, sui browser che lo supportano (fallback automatico altrove) */
 }
 
 
@@ -2245,6 +2247,8 @@ footer a:hover {
 }
 
 .instagram-icon-grande {
+  display: inline-block;       /* per poter azzerare lo spazio vuoto sotto il glifo con line-height */
+  line-height: 1;               /* toglie lo spazio extra sotto l'icona, per avvicinarla alla scritta sottostante */
   color: #bc1888;              /* colore icona: viola Instagram #bc1888; , cambia a #ffffff se su sfondo scuro */
   font-size: 3.45rem;          /* dimensione icona: aumentata del 50% su richiesta di Angelo (28/08/2026), era 2.3rem */
   transition: opacity 0.2s ease; /* animazione hover */
@@ -2262,7 +2266,7 @@ footer a:hover {
 /* Scritta cliccabile sotto l'icona Instagram grande, riutilizzabile su più pagine
    (aggiunta 21/11/2026) */
 .instagram-credit-line {
-  margin-top: 0.6rem;
+  margin-top: 0.15rem;
   font-family: 'Inter', sans-serif;
   font-weight: 600;
   font-size: 0.95rem;
