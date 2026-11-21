@@ -554,51 +554,93 @@ footer {
     margin-top: 40px;
 }
 
+/* Footer "a righe con separatori sottili" (scelto da Angelo tra 3 alternative
+   mostrate come mockup, 21/11/2026): le colonne 1 e 3 non si allargano più a
+   riempire lo spazio (causa del titolo troppo centrato e dei contatti non
+   abbastanza a destra); solo la colonna centrale dei link cresce. Separatori
+   verticali uniformi tra le colonne grazie ad align-items: stretch (senza,
+   avrebbero lunghezza diversa in base al contenuto di ciascuna colonna). */
 .footer-container {
-    max-width: 1100px;
+    max-width: 1300px;
     margin: auto;
-    padding: 12px 20px;                      /* spazio interno footer: riduci primo numero per compattarlo */
+    padding: 26px 40px;
     display: flex;
-    justify-content: space-between;         /* colonne distribuite: prima a sx, ultima a dx */
-    gap: 10px;
-    flex-wrap: wrap;
-    align-items: flex-start;
+    align-items: stretch;
+    gap: 0;
 }
 
 .footer-col {
     flex: 1;
     min-width: 150px;
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-right: 1px solid rgba(255, 255, 255, 0.15);   /* separatore uniforme tra colonne */
 }
 
 .footer-col:first-child {
-    padding-left: 10px;                      /* sposta "Empower Lab" — aumenta per spostarlo a destra */
+    flex: 0 0 auto;                          /* non si allarga: resta ancorata al margine sinistro */
+    padding-left: 0;
+    text-align: left;
 }
 
 .footer-col:nth-child(2) {
-    flex: 1.4;                               /* colonna centrale più larga per i link */
+    flex: 1;                                 /* unica colonna che cresce, resta centrata */
     text-align: center;
-    padding: 0 20px;
 }
 
 .footer-col:last-child {
-    padding-right: 0px;
-    flex: 0.9;
+    flex: 0 0 auto;                          /* non si allarga: resta ancorata al margine destro */
+    padding-right: 0;
     text-align: right;
-    white-space: nowrap;                     /* impedisce all'email di andare a capo */
+    border-right: none;                      /* nessun separatore dopo l'ultima colonna */
 }
 
 .footer-col h3 {
-    margin-bottom: 5px;
+    margin-bottom: 8px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 16px;
+    justify-content: center;
 }
 
 .footer-links a {
     color: white;
     text-decoration: none;
-    display: inline;                         /* link sulla stessa riga */
 }
 
 .footer-links a:hover {
     color: #f39c12;
+}
+
+/* Contatti del footer come riga di icone cerchiate (sostituisce testo+emoji):
+   whatsapp, email, posizione. Numero ed email restano leggibili al passaggio
+   del mouse/tocco tramite "title"/aria-label. */
+.footer-contact-icons {
+    display: flex;
+    gap: 14px;
+    justify-content: flex-end;
+}
+
+.footer-icon-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: #f39c12;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+
+.footer-icon-btn:hover {
+    background: rgba(255, 255, 255, 0.22);
 }
 
 .footer-bottom {
@@ -769,9 +811,35 @@ p {
         margin-top: 16px;
     }
 
+    /* Footer su mobile (21/11/2026): separatori verticali -> linea orizzontale
+       sottile tra i blocchi; contatti come riga di icone centrata, niente
+       più testo lungo che va a capo in modo disordinato. */
     .footer-container {
         flex-direction: column;
+        align-items: center;
         text-align: center;
+        padding: 22px 20px;
+        gap: 0;
+    }
+
+    .footer-col {
+        width: 100%;
+        flex: none;
+        padding: 16px 0;
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-col:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+        text-align: center;
+    }
+
+    .footer-contact-icons {
+        justify-content: center;
     }
 
     .prenota-button {
