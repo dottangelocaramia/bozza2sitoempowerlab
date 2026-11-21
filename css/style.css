@@ -1457,6 +1457,18 @@ color:#27ae60;
   opacity: 0.75;
 }
 
+/* Linea stile C (sfumata, lunga e morbida) - usata sotto Contattaci, "Hai qualche dubbio..."
+   e "Approfondisci con i nostri articoli" in home (21/11/2026). Stessa distanza dal testo
+   sopra (6px) adottata per la linea doppia con punto sotto "Empower Lab Psy". */
+.separatore-linea-c {
+  width: 120px;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #f39c12, transparent);
+  margin: 6px auto 14px auto;
+  border-radius: 2px;
+  opacity: 0.8;
+}
+
 
 
 
