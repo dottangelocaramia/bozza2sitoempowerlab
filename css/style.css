@@ -2147,7 +2147,8 @@ footer a:hover {
   font-weight: 600;
   font-size: 2.8rem;
   letter-spacing: 0.3px;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.25rem; /* 21/11/2026: la linea doppia con punto è stata spostata
+                              sopra la tagline, molto vicina al titolo (vedi sotto) */
   color: #1c1c1c;
 }
 
@@ -2155,8 +2156,14 @@ footer a:hover {
   font-size: 1.1rem;
   font-weight: 300;
   color: #5a6b7a;
-  margin-bottom: 0; /* 21/11/2026: il margine di default del <p> allontanava troppo
-                        la linea doppia con punto sottostante dal testo */
+}
+
+/* La linea doppia con punto, qui, sta SOPRA la tagline e sotto il titolo
+   "Empower Lab Psy": gap ridotto per stare molto vicina al titolo, invece
+   della distanza di default usata per lo stesso componente altrove (es. home). */
+.eplab-hero .linea-doppia-punto {
+  margin-top: 0.25rem;
+  margin-bottom: 0.4rem;
 }
 
 /* Sostituita dalla "linea doppia con punto" qui sotto (21/11/2026): era troppo
