@@ -576,7 +576,7 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border-right: 1px solid rgba(255, 255, 255, 0.15);   /* separatore uniforme tra colonne */
+    border-right: 2px solid rgba(255, 255, 255, 0.15);   /* separatore uniforme tra colonne (leggermente più spesso, 21/11/2026) */
 }
 
 .footer-col:first-child {
@@ -603,8 +603,8 @@ footer {
 
 .footer-links {
     display: flex;
-    flex-wrap: wrap;
-    gap: 6px 16px;
+    flex-wrap: wrap;                         /* su una riga quando c'è spazio, altrimenti va a capo */
+    gap: 8px 28px;                            /* spaziatura orizzontale aumentata su richiesta di Angelo (21/11/2026) */
     justify-content: center;
 }
 
@@ -617,30 +617,30 @@ footer {
     color: #f39c12;
 }
 
-/* Contatti del footer come riga di icone cerchiate (sostituisce testo+emoji):
-   whatsapp, email, posizione. Numero ed email restano leggibili al passaggio
-   del mouse/tocco tramite "title"/aria-label. */
-.footer-contact-icons {
-    display: flex;
-    gap: 14px;
-    justify-content: flex-end;
+/* Interruzione di riga forzata SOLO su mobile, tra "Servizi" e "FAQ": nascosta
+   su desktop (21/11/2026). Vedi il blocco mobile più sotto per il valore attivo. */
+.footer-link-break-mobile {
+    display: none;
 }
 
-.footer-icon-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 34px;
-    height: 34px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.1);
-    color: #f39c12;
+/* Contatti del footer come semplice testo (alternativa scelta da Angelo tra 2
+   mostrate come mockup, 21/11/2026): numero ed email restano link cliccabili. */
+.footer-contact-text p {
+    margin: 0 0 6px 0;
+    font-size: 0.95rem;
+}
+
+.footer-contact-text p:last-child {
+    margin-bottom: 0;
+}
+
+.footer-contact-text a {
+    color: white;
     text-decoration: none;
-    transition: background 0.2s ease;
 }
 
-.footer-icon-btn:hover {
-    background: rgba(255, 255, 255, 0.22);
+.footer-contact-text a:hover {
+    color: #f39c12;
 }
 
 .footer-bottom {
@@ -827,7 +827,7 @@ p {
         flex: none;
         padding: 16px 0;
         border-right: none;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        border-bottom: 2px solid rgba(255, 255, 255, 0.15);
         align-items: center;
         text-align: center;
     }
@@ -838,8 +838,13 @@ p {
         text-align: center;
     }
 
-    .footer-contact-icons {
-        justify-content: center;
+    /* "Home Chi siamo Servizi" su una riga, "FAQ Contatti" sulla successiva:
+       mai un solo link isolato da solo sull'ultima riga (21/11/2026). */
+    .footer-link-break-mobile {
+        display: block;
+        width: 100%;
+        flex-basis: 100%;
+        height: 0;
     }
 
     .prenota-button {
