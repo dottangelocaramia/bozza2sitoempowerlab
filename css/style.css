@@ -259,6 +259,12 @@ h2 {
                           la linea doppia con punto sottostante dal testo */
 }
 
+/* "Benvenuto/a in" / "Empower Lab Psy" su due righe solo su mobile
+   (21/11/2026): nascosto su desktop, dove restano sulla stessa riga. */
+.a-capo-titolo-mobile {
+    display: none;
+}
+
 
 
 
@@ -849,6 +855,11 @@ p {
         width: 100%;
         flex-basis: 100%;
         height: 0;
+    }
+
+    /* "Benvenuto/a in" / "Empower Lab Psy" su due righe solo su mobile (21/11/2026) */
+    .a-capo-titolo-mobile {
+        display: inline;
     }
 
     .prenota-button {
@@ -2240,7 +2251,14 @@ footer a:hover {
    della distanza di default usata per lo stesso componente altrove (es. home). */
 .eplab-hero .linea-doppia-punto {
   margin-top: 0.25rem;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.15rem; /* ridotto da 0.4rem (21/11/2026): più vicina alla tagline sottostante */
+}
+
+/* Spazio tra la tagline e il contenuto successivo raddoppiato su richiesta di
+   Angelo (21/11/2026). Selettore scoperto solo per questa pagina (non si
+   applica alle altre pagine che usano .box-invisibile-testo). */
+.eplab-hero + .box-invisibile-testo {
+  margin-top: 5.2rem;
 }
 
 /* Sostituita dalla "linea doppia con punto" qui sotto (21/11/2026): era troppo
