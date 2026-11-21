@@ -1833,7 +1833,7 @@ margin-top:40px;
 
     margin-top:20px;
 
-    border: 1px solid #eee; /* bordo leggero invece del blocco pieno */
+    border: 2px solid #9575cd; /* viola coerente con le card Corsi/Tutoraggio di Formazione.html */
 
     box-shadow: 0 2px 6px rgba(0,0,0,0.04); /* ombra molto soft */
 
@@ -1872,9 +1872,10 @@ margin-top:20px;
     background: white;
     padding: 25px;
     border-radius: 14px;
-    border: 1px solid rgba(0,0,0,0.06);
+    border: 2px solid #eee;           /* stesso schema delle card grandi (es. percorsi.html): bordo chiaro + accento colorato sopra */
+    border-top: 5px solid #9575cd;    /* viola coerente con le card Corsi/Tutoraggio di Formazione.html */
     box-shadow: 0 4px 14px rgba(0,0,0,0.06);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
     text-decoration: none;
     color: #2c3e50;
     display: flex;                    /* contenuto in colonna per permettere altezza uguale */
@@ -1885,6 +1886,7 @@ margin-top:20px;
 .corso-card:hover {
     transform: translateY(-10px);     /* spostamento più evidente al hover — era -6px */
     box-shadow: 0 20px 40px rgba(0,0,0,0.18); /* ombra più grande e intensa al hover */
+    border-color: #9575cd;            /* bordo interamente viola al hover, come le card grandi */
 }
 
 .corso-card h3 {
@@ -1895,7 +1897,7 @@ margin-top:20px;
 }
 
 .corso-card:hover h3 {
-    color: #4da3ff;                   /* colore titolo al hover */
+    color: #9575cd;                   /* colore titolo al hover allineato al viola del tema, era blu (#4da3ff), incoerente */
 }
 
 .corso-card p {
