@@ -1873,7 +1873,7 @@ margin-top:20px;
     padding: 25px;
     border-radius: 14px;
     border: 2px solid #eee;           /* stesso schema delle card grandi (es. percorsi.html): bordo chiaro + accento colorato sopra */
-    border-top: 5px solid #9575cd;    /* viola coerente con le card Corsi/Tutoraggio di Formazione.html */
+    border-top: 5px solid var(--corso-colore, #9575cd); /* colore della categoria (viola Formazione, verde Test, marrone Workbook...); viola di default */
     box-shadow: 0 4px 14px rgba(0,0,0,0.06);
     transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
     text-decoration: none;
@@ -1886,7 +1886,7 @@ margin-top:20px;
 .corso-card:hover {
     transform: translateY(-10px);     /* spostamento più evidente al hover — era -6px */
     box-shadow: 0 20px 40px rgba(0,0,0,0.18); /* ombra più grande e intensa al hover */
-    border-color: #9575cd;            /* bordo interamente viola al hover, come le card grandi */
+    border-color: var(--corso-colore, #9575cd); /* bordo interamente del colore della categoria al hover */
 }
 
 .corso-card h3 {
@@ -1897,7 +1897,7 @@ margin-top:20px;
 }
 
 .corso-card:hover h3 {
-    color: #9575cd;                   /* colore titolo al hover allineato al viola del tema, era blu (#4da3ff), incoerente */
+    color: var(--corso-colore, #9575cd); /* colore titolo al hover allineato al colore della categoria, era blu (#4da3ff), incoerente */
 }
 
 .corso-card p {
@@ -2115,10 +2115,23 @@ footer a:hover {
   font-family: 'Raleway', sans-serif;
   font-style: italic;
   font-weight: 800;
-  font-size: 2.4rem;
-  letter-spacing: 1px;
+  font-size: 2.8rem;             /* leggermente più grande: pagina di presentazione del progetto, titolo più presente */
+  letter-spacing: 1.5px;
   margin-bottom: 0.6rem;
-  color: #2c3e50;
+  color: #2c3e50;                /* colore pieno di base: fallback per i rari browser senza background-clip:text */
+}
+
+/* Trattamento "wordmark" sfumato per il titolo del progetto (21/11/2026): più
+   accattivante e meno standard rispetto ai titoli delle pagine servizio,
+   senza tornare a un riquadro pieno. Attivo solo dove il browser lo supporta
+   (quasi ovunque); altrove resta il blu scuro pieno impostato sopra. */
+@supports ((background-clip: text) or (-webkit-background-clip: text)) {
+  .eplab-hero h1 {
+    background: linear-gradient(90deg, #2c3e50 0%, #f39c12 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
 }
 
 .eplab-hero .eplab-tagline {
@@ -2134,7 +2147,7 @@ footer a:hover {
   max-width: 720px;
   height: 3px;
   background: #f39c12;
-  margin: 20px auto 0 auto;
+  margin: 8px auto 0 auto;      /* avvicinata alla scritta sopra (era 20px): prima sembrava staccata */
   border-radius: 2px;
 }
 
