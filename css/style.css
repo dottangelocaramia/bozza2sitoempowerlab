@@ -255,6 +255,8 @@ h2 {
     font-size: 2.2em;
     color: #1c1c1c;
     text-align: center;
+    margin-bottom: 0; /* 21/11/2026: il margine di default dell'h1 allontanava troppo
+                          la linea doppia con punto sottostante dal testo */
 }
 
 
@@ -2153,6 +2155,8 @@ footer a:hover {
   font-size: 1.1rem;
   font-weight: 300;
   color: #5a6b7a;
+  margin-bottom: 0; /* 21/11/2026: il margine di default del <p> allontanava troppo
+                        la linea doppia con punto sottostante dal testo */
 }
 
 /* Sostituita dalla "linea doppia con punto" qui sotto (21/11/2026): era troppo
