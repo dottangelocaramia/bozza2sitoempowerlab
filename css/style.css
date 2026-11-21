@@ -563,7 +563,7 @@ footer {
 .footer-container {
     max-width: 1300px;
     margin: auto;
-    padding: 26px 40px;
+    padding: 18px 40px;   /* ridotto da 26px (21/11/2026): su desktop il footer risultava troppo ampio */
     display: flex;
     align-items: stretch;
     gap: 0;
@@ -601,6 +601,11 @@ footer {
     margin-bottom: 8px;
 }
 
+.footer-col p {
+    font-size: 0.92rem;    /* più compatto del paragrafo standard del sito (21/11/2026) */
+    line-height: 1.45;
+}
+
 .footer-links {
     display: flex;
     flex-wrap: wrap;                         /* su una riga quando c'è spazio, altrimenti va a capo */
@@ -626,8 +631,7 @@ footer {
 /* Contatti del footer come semplice testo (alternativa scelta da Angelo tra 2
    mostrate come mockup, 21/11/2026): numero ed email restano link cliccabili. */
 .footer-contact-text p {
-    margin: 0 0 6px 0;
-    font-size: 0.95rem;
+    margin: 0 0 4px 0;
 }
 
 .footer-contact-text p:last-child {
