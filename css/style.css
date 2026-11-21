@@ -1164,7 +1164,7 @@ color:#27ae60;
 
     color: #6b6b6b; /* leggermente più morbido → più elegante */
 
-    max-width: 600px; /* limita larghezza → effetto editoriale (tipo libro/rivista) */
+    max-width: 680px; /* allargata da 600px (21/11/2026): su supporto-psicologico.html il sottotitolo andava a capo per una manciata di pixel; vale per tutte le pagine servizio, solo meno wrapping non voluto, effetto editoriale invariato */
 
     margin-left: auto; /* centratura */
     margin-right: auto; /* centratura */
