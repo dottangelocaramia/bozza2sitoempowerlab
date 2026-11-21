@@ -2112,26 +2112,16 @@ footer a:hover {
 }
 
 .eplab-hero h1 {
-  font-family: 'Raleway', sans-serif;
+  /* Scelta tra 6 alternative mostrate ad Angelo (21/11/2026): EB Garamond,
+     nero, corsivo elegante - al posto del precedente effetto sfumato blu/arancio
+     che non convinceva. */
+  font-family: 'EB Garamond', Georgia, serif;
   font-style: italic;
-  font-weight: 800;
-  font-size: 2.8rem;             /* leggermente più grande: pagina di presentazione del progetto, titolo più presente */
-  letter-spacing: 1.5px;
+  font-weight: 600;
+  font-size: 2.8rem;
+  letter-spacing: 0.3px;
   margin-bottom: 0.6rem;
-  color: #2c3e50;                /* colore pieno di base: fallback per i rari browser senza background-clip:text */
-}
-
-/* Trattamento "wordmark" sfumato per il titolo del progetto (21/11/2026): più
-   accattivante e meno standard rispetto ai titoli delle pagine servizio,
-   senza tornare a un riquadro pieno. Attivo solo dove il browser lo supporta
-   (quasi ovunque); altrove resta il blu scuro pieno impostato sopra. */
-@supports ((background-clip: text) or (-webkit-background-clip: text)) {
-  .eplab-hero h1 {
-    background: linear-gradient(90deg, #2c3e50 0%, #f39c12 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
+  color: #1c1c1c;
 }
 
 .eplab-hero .eplab-tagline {
