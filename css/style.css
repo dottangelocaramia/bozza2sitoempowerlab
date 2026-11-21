@@ -244,6 +244,19 @@ h2 {
     margin-bottom: 0.67em;
 }
 
+/* Titolo di benvenuto in home (21/11/2026): stesso trattamento scelto da
+   Angelo per "Empower Lab Psy" in empowerlab.html (EB Garamond nero corsivo),
+   per coerenza tra le due pagine. Scoperto solo per questo h1, non tocca lo
+   stile h1 generico del sito. */
+.titolo-benvenuto-home {
+    font-family: 'EB Garamond', Georgia, serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 2.2em;
+    color: #1c1c1c;
+    text-align: center;
+}
+
 
 
 
@@ -2130,16 +2143,8 @@ footer a:hover {
   color: #5a6b7a;
 }
 
-.eplab-hero::after {
-  content: "";
-  display: block;
-  width: 80%;
-  max-width: 720px;
-  height: 3px;
-  background: #f39c12;
-  margin: 8px auto 0 auto;      /* avvicinata alla scritta sopra (era 20px): prima sembrava staccata */
-  border-radius: 2px;
-}
+/* Sostituita dalla "linea doppia con punto" qui sotto (21/11/2026): era troppo
+   lunga/pesante rispetto al testo che doveva accompagnare. */
 
 .eplab-lead {
   font-size: 1.15rem;
@@ -3053,4 +3058,37 @@ a.servizio-card {
     border-left: 3px solid #f39c12;
     padding-left: 12px;
     margin-top: 18px;
+}
+
+
+/* ===========================================================================
+   LINEA DOPPIA CON PUNTO — separatore editoriale riutilizzabile (21/11/2026)
+   Scelta da Angelo tra varie alternative per accompagnare un titolo/sottotitolo
+   in modo delicato ma presente, senza la pesantezza di una barra piena lunga.
+   Larghezza pensata per testi di media lunghezza (sottotitoli, tagline); su
+   testi molto più corti o lunghi valuta di aggiustare "width" caso per caso.
+   =========================================================================== */
+.linea-doppia-punto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 280px;
+  max-width: 90%;
+  margin: 6px auto 0 auto;
+}
+.linea-doppia-punto .ldp-barra {
+  flex: 1;
+  height: 1.5px;
+  background: linear-gradient(to right, transparent, #f39c12);
+}
+.linea-doppia-punto .ldp-barra.ldp-destra {
+  background: linear-gradient(to left, transparent, #f39c12);
+}
+.linea-doppia-punto .ldp-punto {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #f39c12;
+  flex-shrink: 0;
 }
